@@ -1,0 +1,821 @@
+# Browser content editor. GitHub permissions enforce write access.
+media:
+  input: docs/assets
+  output: /assets
+  extensions:
+  - png
+  - jpg
+  - jpeg
+  - webp
+  - gif
+  rename: safe
+content:
+- name: shared
+  label: Name, contact & navigation
+  type: file
+  path: docs/_data/shared.json
+  format: json
+  fields:
+  - name: name
+    label: Name
+    type: string
+    required: true
+  - name: location
+    label: Location
+    type: string
+    required: true
+  - name: phone
+    label: Phone
+    type: string
+    required: true
+  - name: email
+    label: Email
+    type: string
+    required: true
+  - name: about_label
+    label: About Label
+    type: string
+    required: true
+  - name: visual_label
+    label: Visual Label
+    type: string
+    required: true
+  - name: interaction_label
+    label: Interaction Label
+    type: string
+    required: true
+  - name: architecture_label
+    label: Architecture Label
+    type: string
+    required: true
+  - name: prototyping_label
+    label: Prototyping Label
+    type: string
+    required: true
+  - name: desktop_notice
+    label: Desktop Notice
+    type: string
+    required: true
+  - name: desktop_short
+    label: Desktop Short
+    type: string
+    required: true
+- name: architecture
+  label: Architecture
+  type: file
+  path: docs/_data/architecture.json
+  format: json
+  fields:
+  - name: title
+    label: Browser tab title
+    type: string
+    required: true
+  - name: text
+    label: Text, headings & captions
+    type: object
+    fields:
+    - name: block_01
+      label: Architecture.
+      type: string
+    - name: block_02
+      label: Information architecture is how individual parts fits together to form a c
+      type: text
+    - name: block_03
+      label: Reshaping a classic internet brand
+      type: string
+    - name: block_04
+      label: Schibsted, Stockholm
+      type: string
+    - name: block_05
+      label: In 2018, I joined Schibsted to help their classic tv guide meet the future
+      type: text
+    - name: block_06
+      label: The plan in place
+      type: string
+    - name: block_07
+      label: 'When I joined, efforts had been made to launch a new section for browsing '
+      type: text
+    - name: block_08
+      label: What we were about
+      type: string
+    - name: block_09
+      label: I started exploring for an alternative strategy. To communicate this to th
+      type: text
+    - name: block_10
+      label: The misconception
+      type: string
+    - name: block_11
+      label: 'I also looked at what content really looked like on streaming services. I '
+      type: text
+    - name: block_12
+      label: A better way
+      type: string
+    - name: block_13
+      label: What if rather than killing off what’s working, we would instead refresh o
+      type: text
+- name: home
+  label: About / home
+  type: file
+  path: docs/_data/home.json
+  format: json
+  fields:
+  - name: text
+    label: Text, headings & captions
+    type: object
+    fields:
+    - name: block_01
+      label: Specialised in bringing product visions to life.
+      type: string
+    - name: block_02
+      label: I help bring product visions to life through visual design, interaction de
+      type: text
+    - name: block_03
+      label: Who I am
+      type: string
+    - name: block_04
+      label: What mostly makes me unique is my breadth. ‍ I can obsess the little thing
+      type: text
+    - name: block_05
+      label: Resume
+      type: string
+    - name: block_06
+      label: 2022 - Present
+      type: string
+    - name: block_07
+      label: Lunar
+      type: string
+    - name: block_08
+      label: 2021 - Present
+      type: string
+    - name: block_09
+      label: Dropset
+      type: string
+    - name: block_10
+      label: 2021 - 2022
+      type: string
+    - name: block_11
+      label: Qapital
+      type: string
+    - name: block_12
+      label: 2019 - 2021
+      type: string
+    - name: block_13
+      label: '44'
+      type: string
+    - name: block_14
+      label: 2018 - 2019
+      type: string
+    - name: block_15
+      label: Schibsted
+      type: string
+    - name: block_16
+      label: 2014 - 2018
+      type: string
+    - name: block_17
+      label: Vantage
+      type: string
+    - name: block_18
+      label: 2013 - 2014
+      type: string
+    - name: block_19
+      label: MAG Interactive
+      type: string
+    - name: block_20
+      label: Skills
+      type: string
+    - name: block_21
+      label: Information architecture
+      type: string
+    - name: block_22
+      label: Low-fi prototyping
+      type: string
+    - name: block_23
+      label: Hi-fi prototyping
+      type: string
+    - name: block_24
+      label: Typography
+      type: string
+    - name: block_25
+      label: Design systems
+      type: string
+    - name: block_26
+      label: Copywriting
+      type: string
+    - name: block_27
+      label: Branding
+      type: string
+    - name: block_28
+      label: Xcode and UIKit
+      type: string
+- name: interaction_design
+  label: Interaction design
+  type: file
+  path: docs/_data/interaction_design.json
+  format: json
+  fields:
+  - name: title
+    label: Browser tab title
+    type: string
+    required: true
+  - name: text
+    label: Text, headings & captions
+    type: object
+    fields:
+    - name: block_01
+      label: Interaction design.
+      type: string
+    - name: block_02
+      label: 'Interaction design often acts as the glue, meshing software together with '
+      type: text
+    - name: block_03
+      label: Pull-to-continue
+      type: string
+    - name: block_04
+      label: Dropset · Streamlining a frequent workflow
+      type: string
+    - name: block_05
+      label: In the app Dropset, there was a need to be able to frequently navigate fro
+      type: text
+    - name: block_06
+      label: 'But, navigating back and forth can quickly become tiring. What was needed '
+      type: text
+    - name: block_07
+      label: Adding a button for it didn’t feel entirely connected to the action. A pul
+      type: text
+    - name: block_08
+      label: The result is a natural way of moving through a sequence of exercises, usi
+      type: string
+  - name: images
+    label: Images
+    type: object
+    fields:
+    - name: image_01
+      label: Interaction 1
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_02
+      label: Interaction 2
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_03
+      label: Interaction 3
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+- name: prototyping
+  label: Prototyping
+  type: file
+  path: docs/_data/prototyping.json
+  format: json
+  fields:
+  - name: title
+    label: Browser tab title
+    type: string
+    required: true
+  - name: text
+    label: Text, headings & captions
+    type: object
+    fields:
+    - name: block_01
+      label: Prototyping.
+      type: string
+    - name: block_02
+      label: Ever since I started designing simple websites back in the late 90s, I hav
+      type: text
+    - name: block_03
+      label: When to use high fidelity in prototyping?
+      type: string
+    - name: block_04
+      label: Testing for desirability, not usability
+      type: string
+    - name: block_05
+      label: Why would you want to build a real app to test, rather than just testing w
+      type: text
+    - name: block_06
+      label: You want an experience that’s not completely standard
+      type: string
+    - name: block_07
+      label: 'I have noticed that there’s three stages of quality control when building '
+      type: text
+    - name: block_08
+      label: Your experience requires live data
+      type: string
+    - name: block_09
+      label: Low fidelity is usually fine for pure usability testing. Concept testing i
+      type: text
+    - name: block_10
+      label: ‍
+      type: string
+    - name: block_11
+      label: One example of that could be building a Chat GPT product. If you’re buildi
+      type: text
+    - name: block_12
+      label: as much
+      type: string
+    - name: block_13
+      label: is wether they can understand how to navigate around it.
+      type: string
+    - name: block_14
+      label: You’re building an MVP of a new product
+      type: string
+    - name: block_15
+      label: Building a completely new product is a high risk endeavour. Most who try i
+      type: text
+  - name: images
+    label: Images
+    type: object
+    fields:
+    - name: image_01
+      label: Prototyping code
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+- name: visual_design
+  label: Visual design
+  type: file
+  path: docs/_data/visual_design.json
+  format: json
+  fields:
+  - name: title
+    label: Browser tab title
+    type: string
+    required: true
+  - name: text
+    label: Text, headings & captions
+    type: object
+    fields:
+    - name: block_01
+      label: Visual design.
+      type: string
+    - name: block_02
+      label: 'Aesthetics are important, because they can have a strong influence on how '
+      type: text
+    - name: block_03
+      label: App design and branding
+      type: string
+    - name: block_04
+      label: Dropset · An app for tracking gym workouts · 2023
+      type: string
+    - name: block_05
+      label: Dropset is an app for tracking gym workouts, made for an audience with a m
+      type: text
+    - name: block_06
+      label: Take it for a spin from the App Store
+      type: string
+    - name: block_07
+      label: Designed in Figma and built with Xcode.
+      type: string
+    - name: block_08
+      label: Marketing site designed with Figma and created with Webflow. Intended to r
+      type: text
+    - name: block_09
+      label: https://getdropset.app
+      type: string
+    - name: block_10
+      label: 'Promotional artwork for the App Store. Intended ro represent what the app '
+      type: text
+    - name: block_11
+      label: The two stripes of the brand are inspired by sport jerseys, where the arms
+      type: text
+    - name: block_12
+      label: Brand design
+      type: string
+    - name: block_13
+      label: The Scandinavian Bank made in 2024
+      type: string
+    - name: block_14
+      label: A branding concept for a neobank from Scandinavia. This came out of a desi
+      type: text
+    - name: block_15
+      label: The tag line.
+      type: string
+    - name: block_16
+      label: Intended associations.
+      type: string
+    - name: block_17
+      label: The colour palette, ranging from sun, forest, stone and snow.
+      type: string
+    - name: block_18
+      label: Bank apps are usually quite heavy on lists, transaction lists in particula
+      type: text
+    - name: block_19
+      label: Photography played a big part in the communication, depicting all the stuf
+      type: text
+    - name: block_20
+      label: The period case from the type face turned out to have this lovely squircle
+      type: text
+    - name: block_21
+      label: Typesettings
+      type: string
+    - name: block_22
+      label: Fintive
+      type: string
+    - name: block_23
+      label: Fintinve · Visual identity, product design and brand work
+      type: string
+    - name: block_24
+      label: 'A web app for a U.S based fintech company, working on underwriting loans. '
+      type: text
+    - name: block_25
+      label: 'Huge financial reports called Credit Reviews, for evaluating lenders were '
+      type: text
+    - name: block_26
+      label: Interactions like detail inspectors, hover actions and editable cells.
+      type: string
+    - name: block_27
+      label: Logotype
+      type: string
+    - name: block_28
+      label: Print design
+      type: string
+    - name: block_29
+      label: Lunar · Printed magazine
+      type: string
+    - name: block_30
+      label: 'Led an initiative on how to communicate research of our customers through '
+      type: text
+  - name: images
+    label: Images
+    type: object
+    fields:
+    - name: image_01
+      label: Wreath
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_02
+      label: Mockup Dropset 1
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_03
+      label: Mockup Dropset 2
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_04
+      label: Mockup Dropset 3
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_05
+      label: Mockup Dropset 4
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_06
+      label: Mockup Dropset 5
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_07
+      label: Mockup Dropset 6
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_08
+      label: Mockup Dropset 7
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_09
+      label: Mockup Dropset 8
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_10
+      label: Mockup Dropset 9
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_11
+      label: Dropset web
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_12
+      label: Wreath onepagelove
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_13
+      label: Wreath designerdaily
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_14
+      label: Dropset artwork
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_15
+      label: Dropset logo
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_16
+      label: Scandinavian tagline
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_17
+      label: Scandinavian associations
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_18
+      label: Scandinavian palette
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_19
+      label: Scandinavian lists
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_20
+      label: Scandinavian photography
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_21
+      label: Scandinavian squircle
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_22
+      label: Scandinavian typesettings
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_23
+      label: Fintive 1
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_24
+      label: Fintive 2
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_25
+      label: Fintive logotype
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_26
+      label: Archetypes 1
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_27
+      label: Archetypes 2
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_28
+      label: Archetypes 3
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_29
+      label: Archetypes 4
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+    - name: image_30
+      label: Archetypes 5
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Description for accessibility
+        type: string
+  - name: links
+    label: External links
+    type: object
+    fields:
+    - name: link_01
+      label: https://apps.apple.com/us/app/hoops/id6444746146
+      type: string
+      description: Use a full https:// address.
+    - name: link_02
+      label: https://getdropset.app/
+      type: string
+      description: Use a full https:// address.
+    - name: link_03
+      label: https://getdropset.app/
+      type: string
+      description: Use a full https:// address.
+    - name: link_04
+      label: https://onepagelove.com/dropset
+      type: string
+      description: Use a full https:// address.
+settings:
+  content:
+    merge: true
+  commit:
+    identity: app

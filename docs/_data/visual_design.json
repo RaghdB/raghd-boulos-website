@@ -1,0 +1,163 @@
+{
+  "title": "Visual design",
+  "text": {
+    "block_01": "Visual design.",
+    "block_02": "Aesthetics are important, because they can have a strong influence on how we perceive things. We tend to find attractive things to actually work better, be easier to use and to be more credible.",
+    "block_03": "App design and branding",
+    "block_04": "Dropset  · An app for tracking gym workouts · 2023",
+    "block_05": "Dropset is an app for tracking gym workouts, made for an audience with a medium to high level of proficiency. It’s got a minimal design, intended to be as non distracting as possible to avoid diverting your attention at the gym. Most of the time using Dropset, you’re busy working out.",
+    "block_06": "Take it for a spin from the App Store",
+    "block_07": "Designed in Figma and built with Xcode.",
+    "block_08": "Marketing site designed with Figma and created with Webflow. Intended to raise curiosity about the app, and to funnel in to the App Store for download. Featured on One Page Love and Designer Daily.",
+    "block_09": "https://getdropset.app",
+    "block_10": "Promotional artwork for the App Store. Intended ro represent what the app is about. Historically you would track workouts with a pen and paper. Now, of course it’s an app. Rendered with Midjourney.",
+    "block_11": "The two stripes of the brand are inspired by sport jerseys, where the arms, shoulders and legs usually display a similar pattern. The name comes from a popular gym technique where one lowers, or drops, the weight on consecutive sets in order to increase fatigue.",
+    "block_12": "Brand design",
+    "block_13": "The Scandinavian Bank made in 2024",
+    "block_14": "A branding concept for a neobank from Scandinavia. This came out of a design sprint as a challenge to the rest of the team to think new. The idea of the concept was to leverage the existing perception of the brand of Scandinavia, as something you can trust.",
+    "block_15": "The tag line.",
+    "block_16": "Intended associations.",
+    "block_17": "The colour palette, ranging from sun, forest, stone and snow.",
+    "block_18": "Bank apps are usually quite heavy on lists, transaction lists in particular. Lots of emphasis here on what people are usually looking for, the number.",
+    "block_19": "Photography played a big part in the communication, depicting all the stuff you would be able to do instead of worrying about your money.",
+    "block_20": "The period case from the type face turned out to have this lovely squircle shape that, when enlarged, works as a container for things like icons.",
+    "block_21": "Typesettings",
+    "block_22": "Fintive",
+    "block_23": "Fintinve · Visual identity, product design and brand work",
+    "block_24": "A web app for a U.S based fintech company, working on underwriting loans. The work included translating a complex excel-based workflow in to an easy to use web app, as well an updated visual identity and a logotype.",
+    "block_25": "Huge financial reports called Credit Reviews, for evaluating lenders were translated in to an easy-to-use web app format.",
+    "block_26": "Interactions like detail inspectors, hover actions and editable cells.",
+    "block_27": "Logotype",
+    "block_28": "Print design",
+    "block_29": "Lunar · Printed magazine",
+    "block_30": "Led an initiative on how to communicate research of our customers through archetypes. I produced a printed magazine that was distributed internally across 500 employees. I led the work with an illustrator, copy writers and a product director. Some of the illustrations I made myself."
+  },
+  "images": {
+    "image_01": {
+      "src": "/assets/661f628a31df14189e04a8e1_Wreath.svg",
+      "alt": ""
+    },
+    "image_02": {
+      "src": "/assets/661fdc2af6a702ccaa6f03de_Mockup-Dropset-1.png",
+      "alt": ""
+    },
+    "image_03": {
+      "src": "/assets/661fdc2adb1215638bade31c_Mockup-Dropset-2.png",
+      "alt": ""
+    },
+    "image_04": {
+      "src": "/assets/661fdfe24867b3c1a133b4d0_Mockup-Dropset-3.png",
+      "alt": ""
+    },
+    "image_05": {
+      "src": "/assets/661fdc2acd25e25e5c41a46b_Mockup-Dropset-4.png",
+      "alt": ""
+    },
+    "image_06": {
+      "src": "/assets/661fdfe28295ff3680f8331f_Mockup-Dropset-5.png",
+      "alt": ""
+    },
+    "image_07": {
+      "src": "/assets/661fdfe2100d2a4a2fb07f11_Mockup-Dropset-6.png",
+      "alt": ""
+    },
+    "image_08": {
+      "src": "/assets/661fdfe2d568c6891f895ace_Mockup-Dropset-7.png",
+      "alt": ""
+    },
+    "image_09": {
+      "src": "/assets/661fe064cd25e25e5c46b8df_Mockup-Dropset-8.png",
+      "alt": ""
+    },
+    "image_10": {
+      "src": "/assets/661fdd8005311bba393b4f5c_Mockup-Dropset-9.png",
+      "alt": ""
+    },
+    "image_11": {
+      "src": "/assets/661f69063c655793d0d3395b_Dropset-web.png",
+      "alt": ""
+    },
+    "image_12": {
+      "src": "/assets/661f8811e7df160ada09af32_Wreath-onepagelove.svg",
+      "alt": ""
+    },
+    "image_13": {
+      "src": "/assets/661f8812be29f59f7a4fac50_Wreath-designerdaily.svg",
+      "alt": ""
+    },
+    "image_14": {
+      "src": "/assets/661fa30a061f1a84d443aa7d_Dropset-artwork.png",
+      "alt": ""
+    },
+    "image_15": {
+      "src": "/assets/661f690690fb11677099e7f0_Dropset-logo.svg",
+      "alt": ""
+    },
+    "image_16": {
+      "src": "/assets/661f80b6a34cc4c68a296274_Scandinavian-tagline.svg",
+      "alt": ""
+    },
+    "image_17": {
+      "src": "/assets/661f80b678f7bb33144c5293_Scandinavian-associations.svg",
+      "alt": ""
+    },
+    "image_18": {
+      "src": "/assets/661f80b6d71ff7b7764ae278_Scandinavian-palette.svg",
+      "alt": ""
+    },
+    "image_19": {
+      "src": "/assets/661f814c265d5b5e693d560b_Scandinavian-lists.svg",
+      "alt": ""
+    },
+    "image_20": {
+      "src": "/assets/661f80b6246ee89d41d1bbc2_Scandinavian-photography.png",
+      "alt": ""
+    },
+    "image_21": {
+      "src": "/assets/661f80b6f9387bd814855aea_Scandinavian-squircle.svg",
+      "alt": ""
+    },
+    "image_22": {
+      "src": "/assets/661f80b6b1ebbd5c00cf7585_Scandinavian-typesettings.svg",
+      "alt": ""
+    },
+    "image_23": {
+      "src": "/assets/661f939d76491a691dd5aa59_Fintive-1.png",
+      "alt": ""
+    },
+    "image_24": {
+      "src": "/assets/661f939da40aecf9c49f8bd7_Fintive-2.png",
+      "alt": ""
+    },
+    "image_25": {
+      "src": "/assets/661f9345a006684061f7da70_Fintive-logotype.svg",
+      "alt": ""
+    },
+    "image_26": {
+      "src": "/assets/661f9e75c61b37f6cf7d8b9a_Archetypes-1.svg",
+      "alt": ""
+    },
+    "image_27": {
+      "src": "/assets/661f9e75592337f7200de130_Archetypes-2.svg",
+      "alt": ""
+    },
+    "image_28": {
+      "src": "/assets/661f9e7519672fd8fe6c0d34_Archetypes-3.svg",
+      "alt": ""
+    },
+    "image_29": {
+      "src": "/assets/66203ca1c237505767cf949f_Archetypes-4.svg",
+      "alt": ""
+    },
+    "image_30": {
+      "src": "/assets/66203cd0b3c08ac7bb1e7c42_Archetypes-5.svg",
+      "alt": ""
+    }
+  },
+  "links": {
+    "link_01": "https://apps.apple.com/us/app/hoops/id6444746146",
+    "link_02": "https://getdropset.app/",
+    "link_03": "https://getdropset.app/",
+    "link_04": "https://onepagelove.com/dropset"
+  }
+}
