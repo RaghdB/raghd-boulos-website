@@ -113,7 +113,7 @@ dl>div{align-items:start}
 <a class="skip-link" href="#main-content">Skip to content</a><main id="main-content" tabindex="-1"><div id="about-page" class="page"><section id="about-intro">
   <p class="eyebrow">About</p>
   <h1>Hey, I’m Raghd.</h1>
-  <p class="intro-copy">I’m a Computer Engineering student @Technion – Israel Institute of Technology.<br>I enjoy building systems, a software enthusiast.<br>You can find me on <a href="https://github.com/RaghdB" target="_blank" rel="noopener noreferrer">GitHub</a>.<br>I’m also on <a href="https://www.linkedin.com/in/raghd-boulos-171759411/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.<br>Or just <a href="mailto:Raghd.Boulos@gmail.com">send me some mail</a>.</p>
+  <p class="intro-copy">I’m a Computer Engineering student @Technion – Israel Institute of Technology. I enjoy building systems.<br>You can find me on <a href="https://github.com/RaghdB" target="_blank" rel="noopener noreferrer">GitHub</a>.<br>I’m also on <a href="https://www.linkedin.com/in/raghd-boulos-171759411/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.<br>Or just send me some <a href="mailto:Raghd.Boulos@gmail.com">mail</a>.</p>
 </section>
 
 <section id="about-projects"><h2 class="visually-hidden">Selected projects</h2>
@@ -355,5 +355,16 @@ for(const track of document.querySelectorAll('.music-artists,.music-albums')){
  track.addEventListener('scroll',updateButtons,{passive:true});
  new ResizeObserver(updateButtons).observe(track);
 }
+const spy=[['about-intro','#about'],['about-projects','#about-projects'],['about-practice','#about-practice']];
+function updateSpy(){
+ if(document.getElementById('about-page').hidden)return;
+ let current=spy[0][1];
+ for(const [id,href] of spy){if(document.getElementById(id).getBoundingClientRect().top<=innerHeight*.4)current=href;}
+ if(innerHeight+scrollY>=document.documentElement.scrollHeight-4)current=spy[spy.length-1][1];
+ for(const a of document.querySelectorAll('.menu a')){
+   if(a.getAttribute('href')===current)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
+ }
+}
+window.addEventListener('scroll',updateSpy,{passive:true});
 window.addEventListener('hashchange',showRoute);showRoute();
 </script></body></html>
