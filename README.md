@@ -2,33 +2,39 @@
 
 Website: https://raghdb.github.io/raghd-boulos-website/
 
-**Edit your website:** https://raghdb.github.io/raghd-boulos-website/admin/
+**Visual website builder:** https://raghdb.github.io/raghd-boulos-website/admin/
 
-## Everyday editing
+## Edit visually
 
-1. Open the editor and choose a page or **Contact & navigation**.
-2. Change text, images, captions or links.
-3. **Save draft** keeps your work in this browser, including new images.
-4. **Connect GitHub**, then **Publish to website** when ready. Allow GitHub Pages a few minutes to rebuild.
+1. Open the builder and connect the GitHub account that owns this repository. Logged-out visitors see only the sign-in screen.
+2. Choose one of your five pages. Double-click text to edit it directly on the canvas.
+3. Drag **Section**, **2 columns**, **3 columns**, **Heading**, **Paragraph**, **Image**, **Button**, **Divider** or **Spacer** onto the page.
+4. Select an element to change its typography, colors, spacing and layout in **Style**. Use **Layers** to select and reorder nested elements. Duplicate or delete selected blocks; undo and redo changes.
+5. Select an image and choose **Replace image** to upload PNG, JPEG, GIF or WebP files. Use **Settings** for element attributes such as link destinations and image descriptions.
+6. Use Desktop, Tablet and Mobile canvas views, then **Preview**. **Save draft** keeps your project and image uploads in this browser; **Publish website** commits the exported pages to GitHub. Allow GitHub Pages a few minutes to deploy.
 
-Bookmark the editor. It works in modern desktop and mobile browsers. Nothing needs to be installed. The public portfolio retains its original layout and desktop-oriented design.
+Bookmark the builder. It runs in a modern desktop browser without installation. The full design workspace benefits from a desktop-sized screen. The portfolio keeps its existing fonts, styles and layout until you deliberately edit and publish it.
 
 ## Connect securely
 
-Use the editor’s **Connect GitHub** button. Its setup link opens GitHub’s own fine-grained access-key page with the required permission preset. Choose **Only select repositories → raghd-boulos-website**, with **Contents: Read and write** and **Metadata: Read**. Keep administration and other unnecessary permissions disabled. Create the key and paste it only into the editor’s password field. Do not paste it in chat, repository files or screenshots.
+The sign-in screen links to GitHub’s own fine-grained access-key page. Choose **Only select repositories → raghd-boulos-website**, with **Contents: Read and write** and **Metadata: Read**. Leave administration and unrelated permissions disabled. Create the key and paste it only into the builder’s password field. Never put a key in chat, source files or screenshots.
 
-The key stays in this tab’s memory. It is cleared by **Disconnect**, closing the tab, or refreshing the page. It is never included in the website, drafts, request URLs or browser storage. GitHub enforces actual write access; knowing the admin URL does not grant publishing permission. The key expires according to the expiration chosen on GitHub and can be revoked there at any time.
+The key remains in this tab’s memory only. Disconnecting, refreshing or closing the tab forgets it. Neither the website nor browser drafts contain credentials. GitHub independently enforces publishing permissions. The builder verifies the owner account before loading pages or reading drafts; knowing the admin URL does not grant editing or publishing access. The key can be revoked in GitHub settings and expires according to the expiry you choose.
 
-## Security and portability
+The repository, website, and builder source are public because they use public GitHub Pages. The locked screen is not a server-side privacy boundary for source code or already-public page content.
 
-There is no extra editing service, local server, Mac app, Python runtime, GitHub CLI or external JavaScript dependency. The editor uses standard browser APIs and sends authenticated publishing requests only to `api.github.com` over HTTPS. Its page has a strict hash-based Content Security Policy; user content is rendered as text. Framed use is blocked before the editor starts. Uploaded images accept PNG, JPEG, GIF and WebP with size and signature checks; SVG uploads are not accepted.
+## Security
 
-Drafts contain website content and images only, stored locally using IndexedDB. They are not secret storage: scripts elsewhere on the same website origin have the browser’s usual same-origin access. Clearing browser data removes drafts. Published content and revision history are public.
+GrapesJS 0.23.9 is bundled locally with its BSD-3-Clause license and verified npm package integrity. No builder CDN, cloud editing service, telemetry, subscription, local server, Python runtime or GitHub CLI is needed to use the editor. The only authenticated online destination is `api.github.com` over HTTPS.
 
-Publishing updates only the six fixed content JSON files and referenced image uploads in this repository. It preserves unrelated remote changes and stops on content conflicts; it never force-pushes. A successful commit starts the usual GitHub Pages build. Repository history can restore a published edit.
+The visual canvas is sandboxed without script execution. Imported page scripts, event handlers, executable component attributes, unsafe URLs and active markup are removed. Custom code and arbitrary embeds are disabled; the original video embed is preserved through an exact allowlist. Exported HTML uses a fixed page shell and the original local Webflow/jQuery scripts, with integrity hashes. CSS is checked before export, including imports, network URLs and style-tag breakouts. Uploads are limited to raster image types with size and signature checks; format checks are not a full image sanitizer.
 
-## Source
+Browser drafts use IndexedDB and include content and pending images, not access keys. Browser storage is not secret storage: the usual same-origin browser rules apply. Clearing browser data removes local drafts.
 
-GitHub Pages builds `docs/` from `main` using Jekyll. Editable content is `docs/_data/*.json`; page layouts are `docs/**/index.html`. Keep Liquid expressions and front matter intact when editing layouts. The editor changes existing fields and project images; adding or removing layout sections requires a code change.
+Publishing is restricted to the five configured HTML pages, `docs/admin/builder-project.json`, and generated image upload paths. It checks the current GitHub revisions, preserves unrelated changes using the latest tree, and never force-pushes. A conflict stops publication. GitHub commit history can restore an earlier published version.
 
-Editor source is `tools/editor-ui.html`, `tools/github-editor-api.js`, and `tools/editor-schema.json`. `python3 tools/build-admin.py` is an optional development packaging helper; it is never needed to edit or publish from the browser. It creates `docs/admin/index.html`, `schema.json` and the Jekyll-generated `content.json` snapshot. Existing styles, animations, Eina fonts and Vimeo/Embedly video remain part of the portfolio.
+## Source and publishing
+
+The initial pages use Jekyll templates and `docs/_data`. The first visual publication exports the five pages as plain static HTML; later visual edits use `docs/admin/builder-project.json` while checking for manual source changes. Existing local CSS, Eina fonts, scripts and approved video remain available.
+
+Builder source is `tools/builder-ui.html` and `tools/builder-api.js`. `docs/admin/vendor/` contains the pinned library. `python3 tools/build-builder.py` packages developer changes into `docs/admin/index.html`; it is optional development tooling, not a runtime dependency. `node tests/builder-security.mjs` runs security and publication regression tests. The older form-editor source is retained for history and is not loaded by the visual builder.
