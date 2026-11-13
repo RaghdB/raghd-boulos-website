@@ -41,12 +41,12 @@ figcaption{padding-top:18px}figcaption h3{font-size:19px;font-weight:600;letter-
 .cover-item:hover .cover-frame{transform:none;box-shadow:0 3px 10px #28292916}
 #about-practice{border-radius:12px}
 .project-copy{padding-top:24px}
-#favorites-page figcaption{padding-top:12px}
-#favorites-page .section-heading{border:0;padding-bottom:0;margin-bottom:24px}
-#favorites-page .category-jumps{gap:8px}
-#favorites-page .category-jumps a{border:1px solid #d8d6cf;border-radius:999px;padding:9px 19px;font-size:14px;font-weight:600;color:#55534c;background:#ffffff50}
-#favorites-page .category-jumps a:hover{background:#fff;border-color:#aaa69a}
-@media(max-width:700px){#about-practice{border-radius:8px}#favorites-page .category-jumps a{font-size:13px;padding:8px 17px}}
+.favorites-page figcaption{padding-top:12px}
+.favorites-page .section-heading{border:0;padding-bottom:0;margin-bottom:24px}
+.favorites-page .category-jumps{gap:8px}
+.favorites-page .category-jumps a{border:1px solid #d8d6cf;border-radius:999px;padding:9px 19px;font-size:14px;font-weight:600;color:#55534c;background:#ffffff50}
+.favorites-page .category-jumps a:hover{background:#fff;border-color:#aaa69a}
+@media(max-width:700px){#about-practice{border-radius:8px}.favorites-page .category-jumps a{font-size:13px;padding:8px 17px}}
 
 .railways-label{display:flex;align-items:center;gap:10px}.railways-label img{width:32px;height:32px;object-fit:contain;flex-shrink:0}
 /* Replay-inspired artwork, held in the original Eina typography and sidebar. */
@@ -95,9 +95,17 @@ dl>div{align-items:start}
 .is-favorites main,.is-music main{padding-top:32vh}.collection-label,.music-eyebrow{display:none}.collection-count{font-size:16px;color:var(--muted)}
 @media(max-width:900px){.project-head h3{font-size:34px}.project-row{grid-template-columns:170px minmax(0,1fr);gap:24px}#about-practice{padding:48px 32px}}
 @media(max-width:700px){.menu{gap:16px}.menu a{height:auto}.intro-copy,.hero-intro{font-size:22px}.project-head h3{font-size:32px}.small,dt{font-size:18px}.project-row{grid-template-columns:1fr;gap:20px}.project-row .project-media{max-width:220px}.game-media{padding:20px}.more-work{grid-template-columns:1fr;gap:20px}#about-practice{padding:40px 28px}.is-favorites main,.is-music main{padding-top:56px}}
+
+/* Two sidebar groups: professional, then personal. */
+.menu-label{font-size:16px;line-height:1;font-weight:300;color:var(--muted);margin-top:26px}
+.is-favorites .page{gap:64px}.favorites-page .section-heading{margin-bottom:32px}.favorites-section{scroll-margin-top:80px}
+.hobby-list{display:flex;flex-direction:column}.hobby-list>div{padding:28px 0;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:4px}.hobby-list>div:last-child{border-bottom:1px solid var(--line)}
+.hobby-more{display:flex;flex-direction:column;gap:8px}.regular-links{display:flex;gap:32px;flex-wrap:wrap;font-size:25px;line-height:1.6;letter-spacing:-.3px}.regular-links a{text-underline-offset:6px}
+@media(max-height:780px) and (min-width:701px){.menu{gap:12px}.menu a{font-size:30px;height:30px}.menu-label{margin-top:16px}}
+@media(max-width:700px){.menu{align-items:baseline}.menu-label{flex-basis:100%;margin-top:6px;font-size:13px}.regular-links{font-size:22px;gap:24px}.hobby-list>div{padding:22px 0}}
 </style></head><body>
 <div class="preview-note">Personal website · Design preview</div>
-<aside class="sidebar"><div class="identity"><strong>Raghd Boulos</strong><span>Acre</span></div><nav class="menu" aria-label="Main navigation"><a href="#about">About</a><a href="#about-projects">Projects</a><a href="#about-practice">What I do</a><a href="#about-interests">Interests</a><a href="#favorites">Favorites</a><a href="#music">Music</a></nav><div class="contact"><a href="tel:+972507444557">+97250 744 4557</a><a href="mailto:Raghd.Boulos@gmail.com">Raghd.Boulos@gmail.com</a></div></aside>
+<aside class="sidebar"><div class="identity"><strong>Raghd Boulos</strong><span>Acre</span></div><nav class="menu" aria-label="Main navigation"><a href="#about">About</a><a href="#about-projects">Projects</a><a href="#about-practice">What I do</a><span class="menu-label">Personal</span><a href="#hobbies">Hobbies</a><a href="#games">Games</a><a href="#watching">Watching</a><a href="#music">Music</a></nav><div class="contact"><a href="tel:+972507444557">+97250 744 4557</a><a href="mailto:Raghd.Boulos@gmail.com">Raghd.Boulos@gmail.com</a></div></aside>
 <a class="skip-link" href="#main-content">Skip to content</a><main id="main-content" tabindex="-1"><div id="about-page" class="page"><section id="about-intro">
   <p class="eyebrow">About</p>
   <h1>From algorithms<br>to hardware.</h1>
@@ -134,151 +142,46 @@ dl>div{align-items:start}
     </div>
   </dl>
 </section>
-
-<section id="about-interests">
-  <h2>Beyond the work</h2>
-  <p class="personal-note">Outside of studies and work, I draw, run, and tinker with software, usually to automate something. Lately I’ve been getting into frisbee.</p>
-  <a href="#favorites" class="text-link">Explore favorites ↗</a>
+<footer class="page-end"><span>Raghd Boulos · Personal website</span><span class="mobile-contact"><a href="mailto:Raghd.Boulos@gmail.com">Raghd.Boulos@gmail.com</a><a href="tel:+972507444557">+97250 744 4557</a></span><a href="https://github.com/RaghdB" target="_blank" rel="noopener noreferrer">GitHub ↗</a></footer></div><div id="hobbies-page" class="page" hidden><header class="page-hero"><h1>Off the clock.</h1><p class="hero-intro">Outside of studies and work, I draw, run, and tinker with software, usually to automate something. Lately I’ve been getting into frisbee.</p></header>
+<section class="hobby-list" aria-label="Hobbies">
+<div><h2>Drawing</h2></div>
+<div><h2>Running</h2></div>
+<div><h2>Building and automating</h2><p class="caption">Software projects and tinkering</p></div>
+<div><h2>Frisbee</h2><p class="caption">Recently started</p></div>
 </section>
-<footer class="page-end"><span>Raghd Boulos · Personal website</span><span class="mobile-contact"><a href="mailto:Raghd.Boulos@gmail.com">Raghd.Boulos@gmail.com</a><a href="tel:+972507444557">+97250 744 4557</a></span><a href="https://github.com/RaghdB" target="_blank" rel="noopener noreferrer">GitHub ↗</a></footer></div><div id="favorites-page" class="page" hidden><header class="page-hero favorites-hero" id="favorites-intro">
-<span class="collection-label">A few personal favorites</span><h1>Off the clock.</h1>
-<p class="hero-intro">Games, stories, and worlds I love.</p>
-<nav class="category-jumps" aria-label="Favorite categories">
-<a href="#favorite-games">Games</a>
-<a href="#favorite-anime">Anime</a>
-<a href="#favorite-tv">TV</a>
-<a href="#favorite-movies">Movies</a>
-</nav></header>
-<section class="favorites-section" id="favorite-games" aria-labelledby="heading-games"><div class="section-heading"><h2 id="heading-games">Games</h2><span class="collection-count">07 favorites</span></div><div class="covers-grid">
-<figure class="cover-item" id="kingdom-hearts-chain-of-memories">
-<div class="cover-frame">
+<section class="hobby-more"><p class="small"><span class="secondary">More of what I like</span></p><p class="regular-links"><a href="#games">Games</a><a href="#watching">Watching</a><a href="#music">Music</a></p></section>
+<footer class="page-end"><span>Raghd Boulos · Personal</span><span class="mobile-contact"><a href="mailto:Raghd.Boulos@gmail.com">Raghd.Boulos@gmail.com</a></span><a href="#about">Back to about ↗</a></footer></div><div id="games-page" class="page favorites-page" hidden><header class="page-hero favorites-hero"><h1>Games.</h1><p class="hero-intro">The games I keep coming back to.</p>
+</header>
+<section class="favorites-section" id="games-games" aria-labelledby="heading-games-games"><h2 id="heading-games-games" class="visually-hidden">Games</h2><div class="covers-grid">
+<figure class="cover-item" id="kingdom-hearts-chain-of-memories"><div class="cover-frame">
 <img class="actual-cover" src="covers/kingdom-hearts-chain-of-memories.png" alt="Kingdom Hearts: Chain of Memories cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-</div>
-<figcaption><h3>Kingdom Hearts</h3>
+</div><figcaption><h3>Kingdom Hearts</h3>
 <p class="favorite-note">Especially Chain of Memories.</p>
 </figcaption></figure>
-<figure class="cover-item" id="undertale">
-<div class="cover-frame">
+<figure class="cover-item" id="undertale"><div class="cover-frame">
 <img class="actual-cover" src="covers/undertale.jpg" alt="Undertale cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-</div>
-<figcaption><h3>Undertale</h3>
+</div><figcaption><h3>Undertale</h3>
 </figcaption></figure>
-<figure class="cover-item" id="persona-5">
-<div class="cover-frame">
+<figure class="cover-item" id="persona-5"><div class="cover-frame">
 <img class="actual-cover" src="covers/persona-5.jpg" alt="Persona 5 cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-</div>
-<figcaption><h3>Persona 5</h3>
+</div><figcaption><h3>Persona 5</h3>
 </figcaption></figure>
-<figure class="cover-item" id="nier-replicant">
-<div class="cover-frame">
+<figure class="cover-item" id="nier-replicant"><div class="cover-frame">
 <img class="actual-cover" src="covers/nier-replicant.jpg" alt="NieR Replicant cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-</div>
-<figcaption><h3>NieR Replicant</h3>
+</div><figcaption><h3>NieR Replicant</h3>
 <p class="favorite-note">ver.1.22474487139…</p>
 </figcaption></figure>
-<figure class="cover-item" id="mega-man-zero">
-<div class="cover-frame">
+<figure class="cover-item" id="mega-man-zero"><div class="cover-frame">
 <img class="actual-cover" src="covers/mega-man-zero.jpg" alt="Mega Man Zero cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-</div>
-<figcaption><h3>Mega Man Zero</h3>
+</div><figcaption><h3>Mega Man Zero</h3>
 </figcaption></figure>
-<figure class="cover-item" id="super-smash-bros-ultimate">
-<div class="cover-frame">
+<figure class="cover-item" id="super-smash-bros-ultimate"><div class="cover-frame">
 <img class="actual-cover" src="covers/super-smash-bros-ultimate.jpg" alt="Super Smash Bros. Ultimate cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-</div>
-<figcaption><h3>Super Smash Bros. Ultimate</h3>
+</div><figcaption><h3>Super Smash Bros. Ultimate</h3>
 </figcaption></figure>
-<figure class="cover-item" id="league-of-legends">
-<div class="cover-frame">
+<figure class="cover-item" id="league-of-legends"><div class="cover-frame">
 <img class="actual-cover" src="covers/league-of-legends.png" alt="League of Legends cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-</div>
-<figcaption><h3>League of Legends</h3>
-</figcaption></figure>
-</div></section>
-<section class="favorites-section" id="favorite-anime" aria-labelledby="heading-anime"><div class="section-heading"><h2 id="heading-anime">Anime</h2><span class="collection-count">08 favorites</span></div><div class="covers-grid">
-<figure class="cover-item" id="chainsaw-man">
-<div class="cover-frame">
-<img class="actual-cover" src="covers/chainsaw-man.jpg" alt="Chainsaw Man cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-</div>
-<figcaption><h3>Chainsaw Man</h3>
-</figcaption></figure>
-<figure class="cover-item" id="dan-da-dan">
-<div class="cover-frame">
-<img class="actual-cover" src="covers/dan-da-dan.jpg" alt="DAN DA DAN cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-</div>
-<figcaption><h3>DAN DA DAN</h3>
-</figcaption></figure>
-<figure class="cover-item" id="hunter-x-hunter">
-<div class="cover-frame">
-<img class="actual-cover" src="covers/hunter-x-hunter.webp" alt="Hunter × Hunter cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-</div>
-<figcaption><h3>Hunter × Hunter</h3>
-</figcaption></figure>
-<figure class="cover-item" id="jojos-bizarre-adventure-golden-wind">
-<div class="cover-frame">
-<img class="actual-cover" src="covers/jojos-bizarre-adventure-golden-wind.jpg" alt="JoJo’s Bizarre Adventure: Golden Wind cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-</div>
-<figcaption><h3>JoJo’s Bizarre Adventure: Golden Wind</h3>
-<p class="favorite-note">Especially Part 5.</p>
-</figcaption></figure>
-<figure class="cover-item" id="jujutsu-kaisen">
-<div class="cover-frame">
-<img class="actual-cover" src="covers/jujutsu-kaisen.jpg" alt="Jujutsu Kaisen cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-</div>
-<figcaption><h3>Jujutsu Kaisen</h3>
-<p class="favorite-note">I loved Season 2 much more than Season 1.</p>
-</figcaption></figure>
-<figure class="cover-item" id="my-hero-academia">
-<div class="cover-frame">
-<img class="actual-cover" src="covers/my-hero-academia.webp" alt="My Hero Academia cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-</div>
-<figcaption><h3>My Hero Academia</h3>
-</figcaption></figure>
-<figure class="cover-item" id="the-promised-neverland">
-<div class="cover-frame">
-<img class="actual-cover" src="covers/the-promised-neverland.jpg" alt="The Promised Neverland cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-</div>
-<figcaption><h3>The Promised Neverland</h3>
-</figcaption></figure>
-<figure class="cover-item" id="violet-evergarden">
-<div class="cover-frame">
-<img class="actual-cover" src="covers/violet-evergarden.webp" alt="Violet Evergarden cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-</div>
-<figcaption><h3>Violet Evergarden</h3>
-</figcaption></figure>
-</div></section>
-<section class="favorites-section" id="favorite-tv" aria-labelledby="heading-tv"><div class="section-heading"><h2 id="heading-tv">TV</h2><span class="collection-count">04 favorites</span></div><div class="covers-grid">
-<figure class="cover-item" id="arcane">
-<div class="cover-frame">
-<img class="actual-cover" src="covers/arcane.jpg" alt="Arcane cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-</div>
-<figcaption><h3>Arcane</h3>
-</figcaption></figure>
-<figure class="cover-item" id="the-blacklist">
-<div class="cover-frame">
-<img class="actual-cover" src="covers/the-blacklist.jpg" alt="The Blacklist cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-</div>
-<figcaption><h3>The Blacklist</h3>
-</figcaption></figure>
-<figure class="cover-item" id="the-office">
-<div class="cover-frame">
-<img class="actual-cover" src="covers/the-office.jpg" alt="The Office cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-</div>
-<figcaption><h3>The Office</h3>
-</figcaption></figure>
-<figure class="cover-item" id="the-boys">
-<div class="cover-frame">
-<img class="actual-cover" src="covers/the-boys.webp" alt="The Boys cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-</div>
-<figcaption><h3>The Boys</h3>
-</figcaption></figure>
-</div></section>
-<section class="favorites-section" id="favorite-movies" aria-labelledby="heading-movies"><div class="section-heading"><h2 id="heading-movies">Movies</h2><span class="collection-count">01 favorite</span></div><div class="covers-grid">
-<figure class="cover-item" id="mean-girls">
-<div class="cover-frame">
-<img class="actual-cover" src="covers/mean-girls.jpg" alt="Mean Girls cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-</div>
-<figcaption><h3>Mean Girls</h3>
+</div><figcaption><h3>League of Legends</h3>
 </figcaption></figure>
 </div></section>
 <details class="cover-sources"><summary>Cover artwork sources</summary><ul>
@@ -289,6 +192,68 @@ dl>div{align-items:start}
 <li><a href="https://backloggd.com/games/mega-man-zero/" target="_blank" rel="noopener noreferrer">Mega Man Zero</a></li>
 <li><a href="https://www.nintendo.be/nl/Games/Nintendo-Switch/Super-Smash-Bros-Ultimate-1395713.html" target="_blank" rel="noopener noreferrer">Super Smash Bros. Ultimate</a></li>
 <li><a href="https://www.steamgriddb.com/game/1865" target="_blank" rel="noopener noreferrer">League of Legends</a></li>
+</ul></details><footer class="page-end"><span>Raghd Boulos · Personal</span><span class="mobile-contact"><a href="mailto:Raghd.Boulos@gmail.com">Raghd.Boulos@gmail.com</a></span><a href="#about">Back to about ↗</a></footer></div><div id="watching-page" class="page favorites-page" hidden><header class="page-hero favorites-hero"><h1>Watching.</h1><p class="hero-intro">Anime, shows, and films I love.</p>
+<nav class="category-jumps" aria-label="Categories"><a href="#watching-anime">Anime</a><a href="#watching-tv">TV &amp; Film</a></nav>
+</header>
+<section class="favorites-section" id="watching-anime" aria-labelledby="heading-watching-anime"><div class="section-heading"><h2 id="heading-watching-anime">Anime</h2></div><div class="covers-grid">
+<figure class="cover-item" id="chainsaw-man"><div class="cover-frame">
+<img class="actual-cover" src="covers/chainsaw-man.jpg" alt="Chainsaw Man cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</div><figcaption><h3>Chainsaw Man</h3>
+</figcaption></figure>
+<figure class="cover-item" id="dan-da-dan"><div class="cover-frame">
+<img class="actual-cover" src="covers/dan-da-dan.jpg" alt="DAN DA DAN cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</div><figcaption><h3>DAN DA DAN</h3>
+</figcaption></figure>
+<figure class="cover-item" id="hunter-x-hunter"><div class="cover-frame">
+<img class="actual-cover" src="covers/hunter-x-hunter.webp" alt="Hunter × Hunter cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</div><figcaption><h3>Hunter × Hunter</h3>
+</figcaption></figure>
+<figure class="cover-item" id="jojos-bizarre-adventure-golden-wind"><div class="cover-frame">
+<img class="actual-cover" src="covers/jojos-bizarre-adventure-golden-wind.jpg" alt="JoJo’s Bizarre Adventure: Golden Wind cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</div><figcaption><h3>JoJo’s Bizarre Adventure: Golden Wind</h3>
+<p class="favorite-note">Especially Part 5.</p>
+</figcaption></figure>
+<figure class="cover-item" id="jujutsu-kaisen"><div class="cover-frame">
+<img class="actual-cover" src="covers/jujutsu-kaisen.jpg" alt="Jujutsu Kaisen cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</div><figcaption><h3>Jujutsu Kaisen</h3>
+<p class="favorite-note">I loved Season 2 much more than Season 1.</p>
+</figcaption></figure>
+<figure class="cover-item" id="my-hero-academia"><div class="cover-frame">
+<img class="actual-cover" src="covers/my-hero-academia.webp" alt="My Hero Academia cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</div><figcaption><h3>My Hero Academia</h3>
+</figcaption></figure>
+<figure class="cover-item" id="the-promised-neverland"><div class="cover-frame">
+<img class="actual-cover" src="covers/the-promised-neverland.jpg" alt="The Promised Neverland cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</div><figcaption><h3>The Promised Neverland</h3>
+</figcaption></figure>
+<figure class="cover-item" id="violet-evergarden"><div class="cover-frame">
+<img class="actual-cover" src="covers/violet-evergarden.webp" alt="Violet Evergarden cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</div><figcaption><h3>Violet Evergarden</h3>
+</figcaption></figure>
+</div></section>
+<section class="favorites-section" id="watching-tv" aria-labelledby="heading-watching-tv"><div class="section-heading"><h2 id="heading-watching-tv">TV &amp; Film</h2></div><div class="covers-grid">
+<figure class="cover-item" id="arcane"><div class="cover-frame">
+<img class="actual-cover" src="covers/arcane.jpg" alt="Arcane cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</div><figcaption><h3>Arcane</h3>
+</figcaption></figure>
+<figure class="cover-item" id="the-blacklist"><div class="cover-frame">
+<img class="actual-cover" src="covers/the-blacklist.jpg" alt="The Blacklist cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</div><figcaption><h3>The Blacklist</h3>
+</figcaption></figure>
+<figure class="cover-item" id="the-office"><div class="cover-frame">
+<img class="actual-cover" src="covers/the-office.jpg" alt="The Office cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</div><figcaption><h3>The Office</h3>
+</figcaption></figure>
+<figure class="cover-item" id="the-boys"><div class="cover-frame">
+<img class="actual-cover" src="covers/the-boys.webp" alt="The Boys cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</div><figcaption><h3>The Boys</h3>
+</figcaption></figure>
+<figure class="cover-item" id="mean-girls"><div class="cover-frame">
+<img class="actual-cover" src="covers/mean-girls.jpg" alt="Mean Girls cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</div><figcaption><h3>Mean Girls</h3>
+</figcaption></figure>
+</div></section>
+<details class="cover-sources"><summary>Cover artwork sources</summary><ul>
 <li><a href="https://www.crank-in.net/gallery/news/115642/1" target="_blank" rel="noopener noreferrer">Chainsaw Man</a></li>
 <li><a href="https://animecorner.me/dan-da-dan-reveals-new-visual-cast-three-short-trailers-focusing-on-action-romance-and-occult/" target="_blank" rel="noopener noreferrer">DAN DA DAN</a></li>
 <li><a href="https://www.betaseries.com/serie/hunter-x-hunter-2011" target="_blank" rel="noopener noreferrer">Hunter × Hunter</a></li>
@@ -302,7 +267,7 @@ dl>div{align-items:start}
 <li><a href="https://www.senscritique.com/serie/The_Office_US/42234/images" target="_blank" rel="noopener noreferrer">The Office</a></li>
 <li><a href="https://www.sensacine.com.mx/series/serie-22668/foto-detalle/?cmediafile=21549904" target="_blank" rel="noopener noreferrer">The Boys</a></li>
 <li><a href="https://filmartgallery.com/products/mean-girls" target="_blank" rel="noopener noreferrer">Mean Girls</a></li>
-</ul></details><footer class="page-end"><span>A few favorites, with room for more.</span><span class="mobile-contact"><a href="mailto:Raghd.Boulos@gmail.com">Raghd.Boulos@gmail.com</a></span><a href="#about">Back to about ↗</a></footer></div><div id="music-page" class="page" hidden><header class="page-hero music-hero"><span class="music-eyebrow">On repeat</span><h1>Inside my<br>headphones.</h1><p class="hero-intro">The artists and albums I keep coming back to.</p><nav class="category-jumps" aria-label="Music categories"><a href="#music-artists">Artists</a><a href="#music-albums">Albums</a></nav></header>
+</ul></details><footer class="page-end"><span>Raghd Boulos · Personal</span><span class="mobile-contact"><a href="mailto:Raghd.Boulos@gmail.com">Raghd.Boulos@gmail.com</a></span><a href="#about">Back to about ↗</a></footer></div><div id="music-page" class="page" hidden><header class="page-hero music-hero"><span class="music-eyebrow">On repeat</span><h1>Inside my<br>headphones.</h1><p class="hero-intro">The artists and albums I keep coming back to.</p><nav class="category-jumps" aria-label="Music categories"><a href="#music-artists">Artists</a><a href="#music-albums">Albums</a></nav></header>
 <section id="music-artists"><div class="section-heading"><h2>Artists</h2><div class="music-controls" aria-label="Browse artists"><button type="button" data-music-direction="-1" aria-label="Previous artists" aria-controls="music-artist-track" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button><button type="button" data-music-direction="1" aria-label="Next artists" aria-controls="music-artist-track"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button></div></div><div id="music-artist-track" class="music-artists" tabindex="0" role="region" aria-label="Artist collection, scroll for more"><figure class="music-item music-artist artist-replay"><a class="music-artwork" href="https://music.apple.com/il/artist/sabrina-carpenter/390647681" target="_blank" rel="noopener noreferrer" aria-label="Sabrina Carpenter on Apple Music (opens in a new tab)"><img src="music/sabrina-carpenter-replay.jpg" alt="Portrait of Sabrina Carpenter" loading="lazy" width="900" height="1200"></a><figcaption><h3>Sabrina Carpenter</h3></figcaption></figure>
 <figure class="music-item music-artist artist-replay"><a class="music-artwork" href="https://music.apple.com/il/artist/eden/1067193301" target="_blank" rel="noopener noreferrer" aria-label="EDEN on Apple Music (opens in a new tab)"><img src="music/eden-replay.jpg" alt="Portrait of EDEN" loading="lazy" width="900" height="1200"></a><figcaption><h3>EDEN</h3></figcaption></figure>
 <figure class="music-item music-artist artist-replay"><a class="music-artwork" href="https://music.apple.com/il/artist/clairo/1187613837" target="_blank" rel="noopener noreferrer" aria-label="Clairo on Apple Music (opens in a new tab)"><img src="music/clairo-replay.jpg" alt="Portrait of Clairo" loading="lazy" width="900" height="1200"></a><figcaption><h3>Clairo</h3></figcaption></figure>
@@ -351,12 +316,14 @@ dl>div{align-items:start}
 <figure class="music-item"><a class="music-artwork" href="https://music.apple.com/us/album/malcolm-todd/1797866833" target="_blank" rel="noopener noreferrer" aria-label="Malcolm Todd on Apple Music (opens in a new tab)"><img src="music/malcolm-todd-replay.jpg" alt="Malcolm Todd album artwork" loading="lazy" width="600" height="600"></a><figcaption><h3>Malcolm Todd</h3><p>Malcolm Todd</p></figcaption></figure>
 <figure class="music-item"><a class="music-artwork" href="https://music.apple.com/us/album/fancy-that/1806614239" target="_blank" rel="noopener noreferrer" aria-label="Fancy That on Apple Music (opens in a new tab)"><img src="music/album-fancy-that.webp" alt="Fancy That album artwork" loading="lazy" width="600" height="600"></a><figcaption><h3>Fancy That</h3><p>PinkPantheress</p></figcaption></figure></div></section>
 <footer class="page-end"><span>Always something on repeat.</span><a href="#about">Back to about ↗</a></footer></div></main><script>
+const ROUTES=['about','hobbies','games','watching','music'];
 function showRoute(){
  const hash=location.hash||'#about';
- const route=hash==='#music'||hash.startsWith('#music-')?'music':hash==='#favorites'||hash.startsWith('#favorite-')?'favorites':'about';
- document.body.classList.toggle('is-favorites',route==='favorites');
+ const key=hash.slice(1);
+ const route=ROUTES.find(r=>r!=='about'&&(key===r||key.startsWith(r+'-')))||(key==='favorites'?'games':'about');
+ document.body.classList.toggle('is-favorites',route==='games'||route==='watching'||route==='hobbies');
  document.body.classList.toggle('is-music',route==='music');
- for(const name of ['about','favorites','music'])document.getElementById(name+'-page').hidden=route!==name;
+ for(const name of ROUTES)document.getElementById(name+'-page').hidden=route!==name;
  document.title=route.charAt(0).toUpperCase()+route.slice(1)+' · Raghd Boulos · Planning preview';
  for(const a of document.querySelectorAll('.menu a')){
    if(a.getAttribute('href')===(route==='about'?hash:'#'+route))a.setAttribute('aria-current','page');
@@ -364,7 +331,7 @@ function showRoute(){
  }
  requestAnimationFrame(()=>{
   const target=document.getElementById(hash.slice(1));
-  if(target&&hash!=='#about'&&hash!=='#favorites'&&hash!=='#music'){target.scrollIntoView({block:'start'});target.tabIndex=-1;target.focus({preventScroll:true});}
+  if(target&&!ROUTES.includes(key)){target.scrollIntoView({block:'start'});target.tabIndex=-1;target.focus({preventScroll:true});}
   else{window.scrollTo({top:0,behavior:'instant'});const h=document.querySelector(('#'+route+'-page')+' h1');h.tabIndex=-1;h.focus({preventScroll:true});}
  });
 }
