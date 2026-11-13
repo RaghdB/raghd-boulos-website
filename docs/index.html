@@ -1,8 +1,8 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><meta name="description" content="Raghd Boulos — Computer Engineering student at the Technion. Projects in digital design, systems programming and algorithms research."><meta property="og:type" content="website"><meta property="og:title" content="Raghd Boulos"><meta property="og:description" content="Computer Engineering student at the Technion. Projects in digital design, systems programming and algorithms research."><meta property="og:url" content="https://raghdb.github.io/raghd-boulos-website/"><meta property="og:image" content="https://raghdb.github.io/raghd-boulos-website/assets/link-preview.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="assets/favicon.ico"><title>Raghd Boulos</title><style>@font-face{font-family:'Eina 03';font-weight:300;font-style:normal;font-display:swap;src:url(assets/661eb2db878dfb0802fedb36_Eina03-Light.ttf) format('truetype')}
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><meta name="color-scheme" content="light dark"><meta name="theme-color" content="#fafbfc" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#16181a" media="(prefers-color-scheme: dark)"><meta name="description" content="Raghd Boulos — Computer Engineering student at the Technion. Projects in digital design, systems programming and algorithms research."><meta property="og:type" content="website"><meta property="og:title" content="Raghd Boulos"><meta property="og:description" content="Computer Engineering student at the Technion. Projects in digital design, systems programming and algorithms research."><meta property="og:url" content="https://raghdb.github.io/raghd-boulos-website/"><meta property="og:image" content="https://raghdb.github.io/raghd-boulos-website/assets/link-preview.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="assets/favicon.ico"><title>Raghd Boulos</title><style>@font-face{font-family:'Eina 03';font-weight:300;font-style:normal;font-display:swap;src:url(assets/661eb2db878dfb0802fedb36_Eina03-Light.ttf) format('truetype')}
 @font-face{font-family:'Eina 03';font-weight:400;font-style:normal;font-display:swap;src:url(assets/64c60ace8019735023b14c10_Eina03-Regular.ttf) format('truetype')}
 @font-face{font-family:'Eina 03';font-weight:600;font-style:normal;font-display:swap;src:url(assets/64c60acf16fce3dec266fe1e_Eina03-SemiBold.ttf) format('truetype')}
 @font-face{font-family:'Eina 03';font-weight:700;font-style:normal;font-display:swap;src:url(assets/64c60ace339c9f8e9884ba1b_Eina03-Bold.ttf) format('truetype')}
-:root{--ink:#282929;--paper:#fafbfc;--muted:#8e8e8f;--line:#d6d7d8;--yellow:#f5ea67}
+:root{--ink:#282929;--paper:#fafbfc;--muted:#6f7071;--line:#d6d7d8;--yellow:#f5ea67}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'Eina 03',sans-serif;font-weight:300}
 [hidden]{display:none!important}a{color:inherit}a:focus-visible{outline:2px solid var(--ink);outline-offset:6px}button{font:inherit}::selection{background:var(--yellow)}
 .preview-note{position:fixed;right:28px;top:18px;z-index:5;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:#737475;background:var(--paper);padding:7px 10px;border:1px solid var(--line)}
@@ -123,6 +123,28 @@ dl>div{align-items:start}
 .mosaic>.feat figcaption h3{font-size:22px}.music-albums.mosaic>.feat figcaption h3{font-size:20px}
 #music-page section,.favorites-section{scroll-margin-top:40px}
 @media(max-width:700px){.mosaic,.music-artists.mosaic,.music-albums.mosaic{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 14px}.music-artists.mosaic{gap:14px}.mosaic>*,.mosaic>.duo{grid-column:span 1}.mosaic>.feat,.mosaic>.feat.right{grid-column:1/-1;grid-row:auto;display:block}.mosaic>.feat>.cover-frame{aspect-ratio:2/3}.music-albums.mosaic>.feat>.music-artwork{aspect-ratio:1}.music-artists.mosaic>.feat>.music-artwork{aspect-ratio:4/5}.music-artists.mosaic>.feat figcaption h3{font-size:26px}.music-artists figcaption h3{font-size:17px}}
+
+/* Footer: a Top link beside the existing one. */
+.page-end>a:not(.to-top){margin-left:auto}
+/* One hover for every piece of artwork. */
+.cover-frame,.music-artwork{transition:filter .2s ease}
+.cover-item:hover .cover-frame,.music-artwork:hover,.music-albums .music-artwork:hover{filter:brightness(1.06)}
+@media(max-width:700px){
+.menu{gap:0 16px}.menu a{padding:10px 0}.menu-label{margin:8px 0 0}
+.page-end>a:not(.to-top){margin-left:0}.page-end a{padding:6px 0;width:fit-content}.mobile-contact{gap:0}
+}
+/* Dark mode follows the system setting. The yellow panel keeps its own light palette. */
+@media(prefers-color-scheme:dark){
+:root{--ink:#eceded;--paper:#16181a;--muted:#9c9ea0;--line:#2e3235;color-scheme:dark}
+#about-practice{--ink:#282929;--muted:#6f7071;--line:#d6d7d8;color:var(--ink)}
+.menu a,.category-jumps a,.favorite-note,figcaption p,.more-work h3{color:var(--muted)}
+.menu a:hover,.menu a[aria-current]{color:var(--ink)}
+.favorites-page .category-jumps a,.music-hero .category-jumps a{color:#c9cbcc;background:#ffffff0d;border-color:#3a3f43}
+.favorites-page .category-jumps a:hover,.music-hero .category-jumps a:hover{background:#ffffff1c;border-color:#5c6267}
+.cover-frame,.music-artwork{background:#202326}
+.project-row .project-media,.cover-frame,#favorite-games .cover-frame,.music-artwork{box-shadow:0 3px 12px #00000059}
+.music-artists figcaption h3{color:#fff}
+}
 </style></head><body>
 <aside class="sidebar"><div class="identity"><strong>Raghd Boulos</strong><span>Haifa</span></div><nav class="menu" aria-label="Main navigation"><a href="#about">About</a><a href="#about-projects">Projects</a><a href="#about-practice">What I do</a><span class="menu-label">Things I enjoy</span><a href="#hobbies">Hobbies</a><a href="#games">Games</a><a href="#watching">Watching</a><a href="#music">Music</a></nav><div class="contact"><a href="tel:+972507444557">+97250 744 4557</a><a href="mailto:Raghd.Boulos@gmail.com">Raghd.Boulos@gmail.com</a></div></aside>
 <a class="skip-link" href="#main-content">Skip to content</a><main id="main-content" tabindex="-1"><div id="about-page" class="page"><section id="about-intro">
@@ -161,8 +183,8 @@ dl>div{align-items:start}
     </div>
   </dl>
 </section>
-<footer class="page-end"><span>Raghd Boulos · Personal website</span><span class="mobile-contact"><a href="mailto:Raghd.Boulos@gmail.com">Raghd.Boulos@gmail.com</a><a href="tel:+972507444557">+97250 744 4557</a></span><a href="https://github.com/RaghdB" target="_blank" rel="noopener noreferrer">GitHub ↗</a></footer></div><div id="hobbies-page" class="page" hidden><header class="page-hero"><h1 class="visually-hidden">Hobbies</h1><p class="hero-intro">Outside of studies and work, I draw, run, and tinker with software, usually automating whatever I find myself doing twice. Lately that’s mostly AI tooling: Claude, Codex, MCP, and local LLMs. I’ve also recently started playing frisbee.</p></header>
-<footer class="page-end"><span>Raghd Boulos · Personal</span><span class="mobile-contact"><a href="mailto:Raghd.Boulos@gmail.com">Raghd.Boulos@gmail.com</a></span><a href="#about">Back to about ↗</a></footer></div><div id="games-page" class="page favorites-page" hidden><header class="page-hero favorites-hero"><h1>Games.</h1><p class="hero-intro">The games I keep coming back to.</p>
+<footer class="page-end"><span>Raghd Boulos · Personal website</span><span class="mobile-contact"><a href="mailto:Raghd.Boulos@gmail.com">Raghd.Boulos@gmail.com</a><a href="tel:+972507444557">+97250 744 4557</a></span><a href="https://github.com/RaghdB" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="#" class="to-top">Top ↑</a></footer></div><div id="hobbies-page" class="page" hidden><header class="page-hero"><h1 class="visually-hidden">Hobbies</h1><p class="hero-intro">Outside of studies and work, I draw, run, and tinker with software, usually automating whatever I find myself doing twice. Lately that’s mostly AI tooling: Claude, Codex, MCP, and local LLMs. I’ve also recently started playing frisbee.</p></header>
+<footer class="page-end"><span>Raghd Boulos · Personal</span><span class="mobile-contact"><a href="mailto:Raghd.Boulos@gmail.com">Raghd.Boulos@gmail.com</a></span><a href="#about">Back to about ↗</a><a href="#" class="to-top">Top ↑</a></footer></div><div id="games-page" class="page favorites-page" hidden><header class="page-hero favorites-hero"><h1>Games.</h1><p class="hero-intro">The games I keep coming back to.</p>
 </header>
 <section class="favorites-section" id="games-games" aria-labelledby="heading-games-games"><h2 id="heading-games-games" class="visually-hidden">Games</h2><div class="covers-grid mosaic" id="grid-games-games">
 <figure class="cover-item feat" id="kingdom-hearts-chain-of-memories"><div class="cover-frame">
@@ -179,9 +201,8 @@ dl>div{align-items:start}
 </div><figcaption><h3>Persona 5</h3>
 </figcaption></figure>
 <figure class="cover-item duo" id="nier-replicant"><div class="cover-frame">
-<img class="actual-cover" src="img/c-nier-replicant.webp" alt="NieR Replicant cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-</div><figcaption><h3>NieR Replicant</h3>
-<p class="favorite-note">ver.1.22474487139…</p>
+<img class="actual-cover" src="img/c-nier-replicant.webp" alt="NieR Replicant ver.1.22474487139… cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</div><figcaption><h3>NieR Replicant ver.1.22474487139…</h3>
 </figcaption></figure>
 <figure class="cover-item duo" id="mega-man-zero"><div class="cover-frame">
 <img class="actual-cover" src="img/c-mega-man-zero.webp" alt="Mega Man Zero cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
@@ -195,16 +216,7 @@ dl>div{align-items:start}
 <img class="actual-cover" src="img/c-league-of-legends.webp" alt="League of Legends cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
 </div><figcaption><h3>League of Legends</h3>
 </figcaption></figure>
-</div></section>
-<details class="cover-sources"><summary>Cover artwork sources</summary><ul>
-<li><a href="https://www.steamgriddb.com/grid/54966" target="_blank" rel="noopener noreferrer">Kingdom Hearts: Chain of Memories</a></li>
-<li><a href="https://www.steamgriddb.com/game/8643" target="_blank" rel="noopener noreferrer">Undertale</a></li>
-<li><a href="https://www.doesitplay.org/game/Persona%205/ps4/Base%20PS4?region=ESRB&amp;version=Standard" target="_blank" rel="noopener noreferrer">Persona 5</a></li>
-<li><a href="https://store.steampowered.com/app/1113560/NieR_Replicant_ver122474487139/" target="_blank" rel="noopener noreferrer">NieR Replicant</a></li>
-<li><a href="https://backloggd.com/games/mega-man-zero/" target="_blank" rel="noopener noreferrer">Mega Man Zero</a></li>
-<li><a href="https://www.nintendo.be/nl/Games/Nintendo-Switch/Super-Smash-Bros-Ultimate-1395713.html" target="_blank" rel="noopener noreferrer">Super Smash Bros. Ultimate</a></li>
-<li><a href="https://www.steamgriddb.com/game/1865" target="_blank" rel="noopener noreferrer">League of Legends</a></li>
-</ul></details><footer class="page-end"><span>Raghd Boulos · Personal</span><span class="mobile-contact"><a href="mailto:Raghd.Boulos@gmail.com">Raghd.Boulos@gmail.com</a></span><a href="#about">Back to about ↗</a></footer></div><div id="watching-page" class="page favorites-page" hidden><header class="page-hero favorites-hero"><h1>Watching.</h1><p class="hero-intro">Anime, shows, and films I love.</p>
+</div></section><footer class="page-end"><span>Raghd Boulos · Personal</span><span class="mobile-contact"><a href="mailto:Raghd.Boulos@gmail.com">Raghd.Boulos@gmail.com</a></span><a href="#about">Back to about ↗</a><a href="#" class="to-top">Top ↑</a></footer></div><div id="watching-page" class="page favorites-page" hidden><header class="page-hero favorites-hero"><h1>Watching.</h1><p class="hero-intro">Anime, shows, and films I love.</p>
 <nav class="category-jumps" aria-label="Categories"><a href="#watching-anime">Anime</a><a href="#watching-tv">TV &amp; Film</a></nav>
 </header>
 <section class="favorites-section" id="watching-anime" aria-labelledby="heading-watching-anime"><div class="section-heading"><h2 id="heading-watching-anime">Anime</h2></div><div class="covers-grid mosaic" id="grid-watching-anime">
@@ -244,7 +256,11 @@ dl>div{align-items:start}
 </figcaption></figure>
 </div></section>
 <section class="favorites-section" id="watching-tv" aria-labelledby="heading-watching-tv"><div class="section-heading"><h2 id="heading-watching-tv">TV &amp; Film</h2></div><div class="covers-grid mosaic" id="grid-watching-tv">
-<figure class="cover-item feat" id="arcane"><div class="cover-frame">
+<figure class="cover-item feat" id="mean-girls"><div class="cover-frame">
+<img class="actual-cover" src="img/c-mean-girls.webp" alt="Mean Girls cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</div><figcaption><h3>Mean Girls</h3>
+</figcaption></figure>
+<figure class="cover-item " id="arcane"><div class="cover-frame">
 <img class="actual-cover" src="img/c-arcane.webp" alt="Arcane cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
 </div><figcaption><h3>Arcane</h3>
 </figcaption></figure>
@@ -252,7 +268,7 @@ dl>div{align-items:start}
 <img class="actual-cover" src="img/c-the-blacklist.webp" alt="The Blacklist cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
 </div><figcaption><h3>The Blacklist</h3>
 </figcaption></figure>
-<figure class="cover-item " id="the-office"><div class="cover-frame">
+<figure class="cover-item duo" id="the-office"><div class="cover-frame">
 <img class="actual-cover" src="img/c-the-office.webp" alt="The Office cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
 </div><figcaption><h3>The Office</h3>
 </figcaption></figure>
@@ -260,28 +276,9 @@ dl>div{align-items:start}
 <img class="actual-cover" src="img/c-the-boys.webp" alt="The Boys cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
 </div><figcaption><h3>The Boys</h3>
 </figcaption></figure>
-<figure class="cover-item duo" id="mean-girls"><div class="cover-frame">
-<img class="actual-cover" src="img/c-mean-girls.webp" alt="Mean Girls cover artwork" width="400" height="600" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-</div><figcaption><h3>Mean Girls</h3>
-</figcaption></figure>
-</div></section>
-<details class="cover-sources"><summary>Cover artwork sources</summary><ul>
-<li><a href="https://www.crank-in.net/gallery/news/115642/1" target="_blank" rel="noopener noreferrer">Chainsaw Man</a></li>
-<li><a href="https://animecorner.me/dan-da-dan-reveals-new-visual-cast-three-short-trailers-focusing-on-action-romance-and-occult/" target="_blank" rel="noopener noreferrer">DAN DA DAN</a></li>
-<li><a href="https://www.betaseries.com/serie/hunter-x-hunter-2011" target="_blank" rel="noopener noreferrer">Hunter × Hunter</a></li>
-<li><a href="https://www.animatetimes.com/news/details.php?id=1593421167" target="_blank" rel="noopener noreferrer">JoJo’s Bizarre Adventure: Golden Wind</a></li>
-<li><a href="https://x.com/animejujutsu/status/1720010357723521298" target="_blank" rel="noopener noreferrer">Jujutsu Kaisen</a></li>
-<li><a href="https://watch.plex.tv/show/my-hero-academia/season/1" target="_blank" rel="noopener noreferrer">My Hero Academia</a></li>
-<li><a href="https://www.imdb.com/title/tt8788458/episodes/" target="_blank" rel="noopener noreferrer">The Promised Neverland</a></li>
-<li><a href="https://www.themoviedb.org/tv/75214-violet-evergarden/images/posters" target="_blank" rel="noopener noreferrer">Violet Evergarden</a></li>
-<li><a href="https://vocal.media/geeks/arcane-isn-t-perfect-but-here-s-why-it-s-worth-watching" target="_blank" rel="noopener noreferrer">Arcane</a></li>
-<li><a href="https://www.kinonews.ru/serial_175207/the-blacklist" target="_blank" rel="noopener noreferrer">The Blacklist</a></li>
-<li><a href="https://www.senscritique.com/serie/The_Office_US/42234/images" target="_blank" rel="noopener noreferrer">The Office</a></li>
-<li><a href="https://www.sensacine.com.mx/series/serie-22668/foto-detalle/?cmediafile=21549904" target="_blank" rel="noopener noreferrer">The Boys</a></li>
-<li><a href="https://filmartgallery.com/products/mean-girls" target="_blank" rel="noopener noreferrer">Mean Girls</a></li>
-</ul></details><footer class="page-end"><span>Raghd Boulos · Personal</span><span class="mobile-contact"><a href="mailto:Raghd.Boulos@gmail.com">Raghd.Boulos@gmail.com</a></span><a href="#about">Back to about ↗</a></footer></div><div id="music-page" class="page" hidden><header class="page-hero music-hero"><span class="music-eyebrow">On repeat</span><h1>Inside my<br>headphones.</h1><p class="hero-intro">The artists and albums I keep coming back to.</p><nav class="category-jumps" aria-label="Music categories"><a href="#music-artists">Artists</a><a href="#music-albums">Albums</a></nav></header>
+</div></section><footer class="page-end"><span>Raghd Boulos · Personal</span><span class="mobile-contact"><a href="mailto:Raghd.Boulos@gmail.com">Raghd.Boulos@gmail.com</a></span><a href="#about">Back to about ↗</a><a href="#" class="to-top">Top ↑</a></footer></div><div id="music-page" class="page" hidden><header class="page-hero music-hero"><span class="music-eyebrow">On repeat</span><h1>Inside my<br>headphones.</h1><p class="hero-intro">The artists and albums I keep coming back to.</p><nav class="category-jumps" aria-label="Music categories"><a href="#music-artists">Artists</a><a href="#music-albums">Albums</a></nav></header>
 <section id="music-artists"><div class="section-heading"><h2>Artists</h2></div><div id="music-artist-track" class="music-artists mosaic"><figure class="music-item music-artist artist-replay feat"><a class="music-artwork" href="https://music.apple.com/il/artist/sabrina-carpenter/390647681" target="_blank" rel="noopener noreferrer" aria-label="Sabrina Carpenter on Apple Music (opens in a new tab)"><img src="img/m-sabrina-carpenter-replay.webp" alt="Portrait of Sabrina Carpenter" loading="lazy" width="900" height="1200"></a><figcaption><h3>Sabrina Carpenter</h3></figcaption></figure>
-<figure class="music-item music-artist artist-replay "><a class="music-artwork" href="https://music.apple.com/il/artist/eden/1067193301" target="_blank" rel="noopener noreferrer" aria-label="EDEN on Apple Music (opens in a new tab)"><img src="img/m-eden-replay.webp" alt="Portrait of EDEN" loading="lazy" width="900" height="1200"></a><figcaption><h3>EDEN</h3></figcaption></figure>
+<figure class="music-item music-artist artist-composited "><a class="music-artwork" href="https://music.apple.com/us/artist/arctic-monkeys/62820413" target="_blank" rel="noopener noreferrer" aria-label="Arctic Monkeys on Apple Music (opens in a new tab)"><img src="img/m-artist-arctic-monkeys-fade.webp" alt="Portrait of Arctic Monkeys" loading="lazy" width="900" height="1200"></a><figcaption><h3>Arctic Monkeys</h3></figcaption></figure>
 <figure class="music-item music-artist artist-replay "><a class="music-artwork" href="https://music.apple.com/il/artist/clairo/1187613837" target="_blank" rel="noopener noreferrer" aria-label="Clairo on Apple Music (opens in a new tab)"><img src="img/m-clairo-replay.webp" alt="Portrait of Clairo" loading="lazy" width="900" height="1200"></a><figcaption><h3>Clairo</h3></figcaption></figure>
 <figure class="music-item music-artist artist-replay "><a class="music-artwork" href="https://music.apple.com/il/artist/pinkpantheress/1552521489" target="_blank" rel="noopener noreferrer" aria-label="PinkPantheress on Apple Music (opens in a new tab)"><img src="img/m-pinkpantheress-replay.webp" alt="Portrait of PinkPantheress" loading="lazy" width="900" height="1200"></a><figcaption><h3>PinkPantheress</h3></figcaption></figure>
 <figure class="music-item music-artist artist-replay "><a class="music-artwork" href="https://music.apple.com/il/artist/jeremy-zucker/1049356910" target="_blank" rel="noopener noreferrer" aria-label="Jeremy Zucker on Apple Music (opens in a new tab)"><img src="img/m-jeremy-zucker-replay.webp" alt="Portrait of Jeremy Zucker" loading="lazy" width="900" height="1200"></a><figcaption><h3>Jeremy Zucker</h3></figcaption></figure>
@@ -289,7 +286,7 @@ dl>div{align-items:start}
 <figure class="music-item music-artist artist-replay "><a class="music-artwork" href="https://music.apple.com/il/artist/malcolm-todd/1624326848" target="_blank" rel="noopener noreferrer" aria-label="Malcolm Todd on Apple Music (opens in a new tab)"><img src="img/m-malcolm-todd-portrait-replay.webp" alt="Portrait of Malcolm Todd" loading="lazy" width="900" height="1200"></a><figcaption><h3>Malcolm Todd</h3></figcaption></figure>
 <figure class="music-item music-artist artist-replay "><a class="music-artwork" href="https://music.apple.com/il/artist/porter-robinson/282330711" target="_blank" rel="noopener noreferrer" aria-label="Porter Robinson on Apple Music (opens in a new tab)"><img src="img/m-porter-robinson-replay.webp" alt="Portrait of Porter Robinson" loading="lazy" width="900" height="1200"></a><figcaption><h3>Porter Robinson</h3></figcaption></figure>
 <figure class="music-item music-artist artist-composited "><a class="music-artwork" href="https://music.apple.com/us/artist/kanye-west/2715720" target="_blank" rel="noopener noreferrer" aria-label="Kanye West on Apple Music (opens in a new tab)"><img src="img/m-kanye-west-fade.webp" alt="Portrait of Kanye West" loading="lazy" width="900" height="1200"></a><figcaption><h3>Kanye West</h3></figcaption></figure>
-<figure class="music-item music-artist artist-composited feat right"><a class="music-artwork" href="https://music.apple.com/us/artist/arctic-monkeys/62820413" target="_blank" rel="noopener noreferrer" aria-label="Arctic Monkeys on Apple Music (opens in a new tab)"><img src="img/m-artist-arctic-monkeys-fade.webp" alt="Portrait of Arctic Monkeys" loading="lazy" width="900" height="1200"></a><figcaption><h3>Arctic Monkeys</h3></figcaption></figure>
+<figure class="music-item music-artist artist-replay feat right"><a class="music-artwork" href="https://music.apple.com/il/artist/eden/1067193301" target="_blank" rel="noopener noreferrer" aria-label="EDEN on Apple Music (opens in a new tab)"><img src="img/m-eden-replay.webp" alt="Portrait of EDEN" loading="lazy" width="900" height="1200"></a><figcaption><h3>EDEN</h3></figcaption></figure>
 <figure class="music-item music-artist artist-replay "><a class="music-artwork" href="https://music.apple.com/us/artist/the-neighbourhood/219350813" target="_blank" rel="noopener noreferrer" aria-label="The Neighbourhood on Apple Music (opens in a new tab)"><img src="img/m-the-neighbourhood-replay.webp" alt="Portrait of The Neighbourhood" loading="lazy" width="900" height="1200"></a><figcaption><h3>The Neighbourhood</h3></figcaption></figure>
 <figure class="music-item music-artist artist-replay "><a class="music-artwork" href="https://music.apple.com/il/artist/daft-punk/5468295" target="_blank" rel="noopener noreferrer" aria-label="Daft Punk on Apple Music (opens in a new tab)"><img src="img/m-daft-punk-replay.webp" alt="Portrait of Daft Punk" loading="lazy" width="900" height="1200"></a><figcaption><h3>Daft Punk</h3></figcaption></figure>
 <figure class="music-item music-artist artist-composited "><a class="music-artwork" href="https://music.apple.com/us/artist/thirty-seconds-to-mars/2307416" target="_blank" rel="noopener noreferrer" aria-label="Thirty Seconds to Mars on Apple Music (opens in a new tab)"><img src="img/m-artist-thirty-seconds-to-mars-fade.webp" alt="Portrait of Thirty Seconds to Mars" loading="lazy" width="900" height="1200"></a><figcaption><h3>Thirty Seconds to Mars</h3></figcaption></figure>
@@ -311,7 +308,7 @@ dl>div{align-items:start}
 <figure class="music-item duo"><a class="music-artwork" href="https://music.apple.com/us/album/a-beautiful-lie/1440839104" target="_blank" rel="noopener noreferrer" aria-label="A Beautiful Lie on Apple Music (opens in a new tab)"><img src="img/m-a-beautiful-lie-replay.webp" alt="A Beautiful Lie album artwork" loading="lazy" width="600" height="600"></a><figcaption><h3>A Beautiful Lie</h3><p>Thirty Seconds to Mars</p></figcaption></figure>
 <figure class="music-item "><a class="music-artwork" href="https://music.apple.com/us/album/random-access-memories-10th-anniversary-edition/1673536063" target="_blank" rel="noopener noreferrer" aria-label="Random Access Memories (10th Anniversary Edition) on Apple Music (opens in a new tab)"><img src="img/m-album-random-access-memories-10th-anniversary-edition.webp" alt="Random Access Memories (10th Anniversary Edition) album artwork" loading="lazy" width="600" height="600"></a><figcaption><h3>Random Access Memories (10th Anniversary Edition)</h3><p>Daft Punk</p></figcaption></figure>
 <figure class="music-item "><a class="music-artwork" href="https://music.apple.com/us/album/ddaarrkk/1846908886" target="_blank" rel="noopener noreferrer" aria-label="DDAARRKK on Apple Music (opens in a new tab)"><img src="img/m-album-ddaarrkk.webp" alt="DDAARRKK album artwork" loading="lazy" width="600" height="600"></a><figcaption><h3>DDAARRKK</h3><p>EDEN</p></figcaption></figure>
-<figure class="music-item "><a class="music-artwork" href="https://music.apple.com/us/album/love-is-not-dying-deluxe-version/1502746151" target="_blank" rel="noopener noreferrer" aria-label="love is not dying (Deluxe Version) on Apple Music (opens in a new tab)"><img src="img/m-album-love-is-not-dying-deluxe-version.webp" alt="love is not dying (Deluxe Version) album artwork" loading="lazy" width="600" height="600"></a><figcaption><h3>love is not dying (Deluxe Version)</h3><p>Jeremy Zucker</p></figcaption></figure>
+<figure class="music-item "><a class="music-artwork" href="https://music.apple.com/us/album/model/1734187714" target="_blank" rel="noopener noreferrer" aria-label="Model on Apple Music (opens in a new tab)"><img src="img/m-album-model.webp" alt="Model album artwork" loading="lazy" width="600" height="600"></a><figcaption><h3>Model</h3><p>Wallows</p></figcaption></figure>
 <figure class="music-item "><a class="music-artwork" href="https://music.apple.com/us/album/one-x/388130643" target="_blank" rel="noopener noreferrer" aria-label="One-X on Apple Music (opens in a new tab)"><img src="img/m-album-one-x.webp" alt="One-X album artwork" loading="lazy" width="600" height="600"></a><figcaption><h3>One-X</h3><p>Three Days Grace</p></figcaption></figure>
 <figure class="music-item "><a class="music-artwork" href="https://music.apple.com/us/album/true-colors/1470706630" target="_blank" rel="noopener noreferrer" aria-label="True Colors on Apple Music (opens in a new tab)"><img src="img/m-album-true-colors.webp" alt="True Colors album artwork" loading="lazy" width="600" height="600"></a><figcaption><h3>True Colors</h3><p>Zedd</p></figcaption></figure>
 <figure class="music-item "><a class="music-artwork" href="https://music.apple.com/us/album/ultrasound/1869516027" target="_blank" rel="noopener noreferrer" aria-label="(((((ultraSOUND)))))+ on Apple Music (opens in a new tab)"><img src="img/m-album-ultrasound.webp" alt="(((((ultraSOUND)))))+ album artwork" loading="lazy" width="600" height="600"></a><figcaption><h3>(((((ultraSOUND)))))+</h3><p>The Neighbourhood</p></figcaption></figure>
@@ -321,13 +318,13 @@ dl>div{align-items:start}
 <figure class="music-item "><a class="music-artwork" href="https://music.apple.com/us/album/requiem/1755274994" target="_blank" rel="noopener noreferrer" aria-label="Requiem on Apple Music (opens in a new tab)"><img src="img/m-requiem.webp" alt="Requiem album artwork" loading="lazy" width="600" height="600"></a><figcaption><h3>Requiem</h3><p>keshi</p></figcaption></figure>
 <figure class="music-item "><a class="music-artwork" href="https://music.apple.com/us/album/icymi/1734293975" target="_blank" rel="noopener noreferrer" aria-label="ICYMI on Apple Music (opens in a new tab)"><img src="img/m-album-icymi.webp" alt="ICYMI album artwork" loading="lazy" width="600" height="600"></a><figcaption><h3>ICYMI</h3><p>EDEN</p></figcaption></figure>
 <figure class="music-item "><a class="music-artwork" href="https://music.apple.com/us/album/emails-i-cant-send-fwd/1676555529" target="_blank" rel="noopener noreferrer" aria-label="emails i can’t send fwd: on Apple Music (opens in a new tab)"><img src="img/m-emails-i-can-t-send-fwd-replay.webp" alt="emails i can’t send fwd: album artwork" loading="lazy" width="600" height="600"></a><figcaption><h3>emails i can’t send fwd:</h3><p>Sabrina Carpenter</p></figcaption></figure>
-<figure class="music-item "><a class="music-artwork" href="https://music.apple.com/us/album/model/1734187714" target="_blank" rel="noopener noreferrer" aria-label="Model on Apple Music (opens in a new tab)"><img src="img/m-album-model.webp" alt="Model album artwork" loading="lazy" width="600" height="600"></a><figcaption><h3>Model</h3><p>Wallows</p></figcaption></figure>
+<figure class="music-item "><a class="music-artwork" href="https://music.apple.com/us/album/the-first-time/1895174191" target="_blank" rel="noopener noreferrer" aria-label="THE FIRST TIME on Apple Music (opens in a new tab)"><img src="img/m-the-first-time-replay.webp" alt="THE FIRST TIME album artwork" loading="lazy" width="600" height="600"></a><figcaption><h3>THE FIRST TIME</h3><p>The Kid LAROI</p></figcaption></figure>
 <figure class="music-item "><a class="music-artwork" href="https://music.apple.com/us/album/tweaker-poem-ep/6778593156" target="_blank" rel="noopener noreferrer" aria-label="Tweaker Poem - EP on Apple Music (opens in a new tab)"><img src="img/m-album-tweaker-poem-ep.webp" alt="Tweaker Poem - EP album artwork" loading="lazy" width="600" height="600"></a><figcaption><h3>Tweaker Poem - EP</h3><p>Frost Children</p></figcaption></figure>
 <figure class="music-item "><a class="music-artwork" href="https://music.apple.com/us/album/victory/1892422364" target="_blank" rel="noopener noreferrer" aria-label="Victory on Apple Music (opens in a new tab)"><img src="img/m-album-victory.webp" alt="Victory album artwork" loading="lazy" width="600" height="600"></a><figcaption><h3>Victory</h3><p>Madeon</p></figcaption></figure>
-<figure class="music-item feat"><a class="music-artwork" href="https://music.apple.com/us/album/the-first-time/1895174191" target="_blank" rel="noopener noreferrer" aria-label="THE FIRST TIME on Apple Music (opens in a new tab)"><img src="img/m-the-first-time-replay.webp" alt="THE FIRST TIME album artwork" loading="lazy" width="600" height="600"></a><figcaption><h3>THE FIRST TIME</h3><p>The Kid LAROI</p></figcaption></figure>
+<figure class="music-item feat"><a class="music-artwork" href="https://music.apple.com/us/album/love-is-not-dying-deluxe-version/1502746151" target="_blank" rel="noopener noreferrer" aria-label="love is not dying (Deluxe Version) on Apple Music (opens in a new tab)"><img src="img/m-album-love-is-not-dying-deluxe-version.webp" alt="love is not dying (Deluxe Version) album artwork" loading="lazy" width="600" height="600"></a><figcaption><h3>love is not dying (Deluxe Version)</h3><p>Jeremy Zucker</p></figcaption></figure>
 <figure class="music-item "><a class="music-artwork" href="https://music.apple.com/us/album/malcolm-todd/1797866833" target="_blank" rel="noopener noreferrer" aria-label="Malcolm Todd on Apple Music (opens in a new tab)"><img src="img/m-malcolm-todd-replay.webp" alt="Malcolm Todd album artwork" loading="lazy" width="600" height="600"></a><figcaption><h3>Malcolm Todd</h3><p>Malcolm Todd</p></figcaption></figure>
 <figure class="music-item "><a class="music-artwork" href="https://music.apple.com/us/album/fancy-that/1806614239" target="_blank" rel="noopener noreferrer" aria-label="Fancy That on Apple Music (opens in a new tab)"><img src="img/m-album-fancy-that.webp" alt="Fancy That album artwork" loading="lazy" width="600" height="600"></a><figcaption><h3>Fancy That</h3><p>PinkPantheress</p></figcaption></figure></div></section>
-<footer class="page-end"><span>Always something on repeat.</span><a href="#about">Back to about ↗</a></footer></div></main><script>
+<footer class="page-end"><span>Always something on repeat.</span><a href="#about">Back to about ↗</a><a href="#" class="to-top">Top ↑</a></footer></div></main><script>
 const ROUTES=['about','hobbies','games','watching','music'];
 function showRoute(){
  const hash=location.hash||'#about';
@@ -360,4 +357,5 @@ function updateSpy(){
 }
 window.addEventListener('scroll',updateSpy,{passive:true});
 window.addEventListener('hashchange',showRoute);showRoute();
+for(const a of document.querySelectorAll('.to-top'))a.addEventListener('click',e=>{e.preventDefault();scrollTo(0,0);});
 </script></body></html>
