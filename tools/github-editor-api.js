@@ -100,7 +100,7 @@
     if (!sameKeys(nextFiles, PATHS) || !Array.isArray(nextSchema.content) || nextSchema.content.length !== NAMES.length || new Set(nextSchema.content.map(entry=>entry.name)).size !== NAMES.length || nextSchema.content.some(entry=>!NAMES.includes(entry.name) || PATHS[entry.name] !== entry.path)) throw problem('The editor configuration is invalid.');
   }
 
-  let ready = (async () => {
+  async function initialize() {
     const loaded = await Promise.all([snapshot('schema.json'), snapshot('content.json')]);
     schema = loaded[0];
     initial = loaded[1].files;
@@ -128,9 +128,19 @@
       restored = true;
     }
     validate(files);
-  })();
-  // Defer errors to API callers; avoid an unhandled rejection during page loading.
-  ready.catch(() => {});
+  }
+
+  // Opening the public login page must not load content or read browser drafts.
+  let ready = null;
+  function ensureReady() {
+    requireConnection();
+    if (!ready) ready = initialize();
+    return ready;
+  }
+
+  function requireConnection() {
+    if (!credential) throw problem('Connect the RaghdB GitHub account before opening the editor.');
+  }
 
   async function api(route, method='GET', body=null, auth=credential) {
     if (typeof auth !== 'string' || !/^github_pat_[A-Za-z0-9_]{20,240}$/.test(auth)) throw problem('Connect GitHub with a fine-grained personal access token before publishing.');
@@ -142,7 +152,13 @@
       response = await fetch(url, {method, redirect:'error', credentials:'omit', cache:'no-store', referrerPolicy:'no-referrer', headers:{'Authorization':'Bearer ' + auth, 'Accept':'application/vnd.github+json', 'X-GitHub-Api-Version':'2022-11-28', ...(body ? {'Content-Type':'application/json'} : {})}, ...(body ? {body:JSON.stringify(body)} : {})});
     } catch (_) { throw problem('GitHub could not be reached. Your draft is safe. Check your internet connection and try again.'); }
     if (!response.ok) {
-      if (response.status === 401) throw problem('The GitHub token is invalid or expired. Connect GitHub again.');
+      if (response.status === 401) {
+        credential = null;
+        ++connectionVersion;
+        for (const url of previews.values()) URL.revokeObjectURL(url);
+        previews.clear();
+        throw problem('The GitHub token is invalid or expired. Connect GitHub again.');
+      }
       if (response.status === 403) throw problem('GitHub denied access. Check the token’s repository permissions, or wait if GitHub is limiting requests.');
       if (response.status === 404) throw problem('Give the token access to RaghdB/raghd-boulos-website and Contents read and write permission.');
       if (response.status === 409 || response.status === 422) throw problem('The website changed on GitHub while publishing. Nothing was force-pushed. Review remote changes before trying again.');
@@ -182,10 +198,13 @@
     if (busy) throw problem('Wait for the current save or publish to finish.');
     ++connectionVersion;
     credential = null;
+    for (const url of previews.values()) URL.revokeObjectURL(url);
+    previews.clear();
     return {state:'idle', message:'Disconnected. The token has been forgotten.'};
   };
 
   window.websiteEditorImagePreview = src => {
+    if (!credential) return '';
     if (uploads.has(src)) {
       if (!previews.has(src)) {
         const value = uploads.get(src);
@@ -288,7 +307,7 @@
 
   async function resetDraft() {
     // This also recovers from an invalid saved draft; wait for boot to settle first.
-    await ready.catch(() => {});
+    await ensureReady().catch(() => {});
     const loaded = await Promise.all([snapshot('schema.json'), snapshot('content.json')]);
     checkConfiguration(loaded[0], loaded[1].files);
     const previous = {schema,initial,files,baseline,originalAssets};
@@ -311,15 +330,18 @@
   }
 
   window.websiteEditorApi = async (path, body=null) => {
+    if (path === '/api/connection' && body === null) return {state:credential?'connected':'idle', message:credential?'GitHub connected.':'Connect GitHub to publish.'};
+    requireConnection();
     if (path === '/api/reset') {
       if (!sameKeys(body,{})) throw problem('Unexpected request fields.');
       if (busy) throw problem('Another save or publish is running. Please wait.');
       busy = true;
       try { return await resetDraft(); } finally { busy = false; }
     }
-    await ready;
+    await ensureReady();
+    // A disconnect may have happened while the snapshots or draft were loading.
+    requireConnection();
     if (path === '/api/content' && body === null) return {schema:copy(schema),files:copy(files),status:{authenticated:!!credential,repo:REPO,draftRestored:restored,message:restored ? 'Your saved draft and images were restored in this browser.' : 'Connect GitHub to publish. Drafts are saved only in this browser.'}};
-    if (path === '/api/connection' && body === null) return {state:credential?'connected':'idle', message:credential?'GitHub connected.':'Connect GitHub to publish.'};
     if (busy) throw problem('Another save or publish is running. Please wait.');
     busy = true;
     try {
