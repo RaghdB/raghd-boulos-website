@@ -25,7 +25,17 @@ def compose(source, width=900, height=1200, top=0.0,
     crop_y = round(max(0, scaled_height - width) * top)
     square = np.asarray(resized, dtype=np.uint8)[crop_y:crop_y + width]
     if square.shape[0] < width:
-        square = np.pad(square, ((0, width-square.shape[0]), (0, 0), (0, 0)), mode='edge')
+        # Preserve every member of landscape group portraits. Centre the full
+        # photo on an edge-extended, softly blended square rather than cropping.
+        missing = width - square.shape[0]
+        pad_top = missing // 2
+        padded = np.pad(square, ((pad_top, missing-pad_top), (0, 0), (0, 0)), mode='edge')
+        soft = np.asarray(Image.fromarray(padded).filter(ImageFilter.GaussianBlur(50)), dtype=np.float32)
+        row = np.arange(width, dtype=np.float32)
+        edge = np.minimum(row-pad_top, pad_top+square.shape[0]-1-row)
+        blend = np.clip(edge/45, 0, 1)
+        blend = (blend*blend*(3-2*blend))[:,None,None]
+        square = np.rint(soft*(1-blend)+padded*blend).astype(np.uint8)
     extended = np.pad(square, ((0, height-width), (0, 0), (0, 0)), mode='edge')
     blurred = np.asarray(Image.fromarray(extended).filter(
         ImageFilter.GaussianBlur(blur_radius)), dtype=np.float32)
@@ -45,12 +55,15 @@ def main():
     parser.add_argument('--top', type=float, default=0.0,
                         help='Vertical crop position 0=top, 1=bottom. No horizontal crop.')
     parser.add_argument('--blur', type=float, default=150)
+    parser.add_argument('--crop-square', action='store_true', help='Centre-crop a solo portrait to a square before compositing')
     args = parser.parse_args()
     if not 0 <= args.top <= 1:
         parser.error('--top must be between 0 and 1')
     if args.output.suffix.lower() != '.png':
         parser.error('Use a PNG output to preserve the composited pixels losslessly')
     with Image.open(args.source) as photo:
+        if args.crop_square:
+            photo = ImageOps.fit(ImageOps.exif_transpose(photo), (900,900), method=Image.Resampling.LANCZOS)
         card = compose(photo, top=args.top, blur_radius=args.blur)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     card.save(args.output, format='PNG', optimize=True)
