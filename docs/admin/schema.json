@@ -1,0 +1,1317 @@
+{
+  "content": [
+    {
+      "name": "shared",
+      "label": "Contact & navigation",
+      "type": "file",
+      "path": "docs/_data/shared.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "name",
+          "label": "Your name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "location",
+          "label": "Location",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "phone",
+          "label": "Phone number",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "email",
+          "label": "Email address",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "about_label",
+          "label": "About navigation label",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "visual_label",
+          "label": "Visual design navigation label",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "interaction_label",
+          "label": "Interaction design navigation label",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "architecture_label",
+          "label": "Architecture navigation label",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "prototyping_label",
+          "label": "Prototyping navigation label",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "desktop_notice",
+          "label": "Desktop viewing message",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "desktop_short",
+          "label": "Short desktop viewing message",
+          "type": "string",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "architecture",
+      "label": "Architecture",
+      "type": "file",
+      "path": "docs/_data/architecture.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Browser tab title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text",
+          "label": "Text, headings & captions",
+          "type": "object",
+          "fields": [
+            {
+              "name": "block_01",
+              "label": "Main heading",
+              "type": "string"
+            },
+            {
+              "name": "block_02",
+              "label": "Introduction",
+              "type": "text"
+            },
+            {
+              "name": "block_03",
+              "label": "Section 1 — heading",
+              "type": "string"
+            },
+            {
+              "name": "block_04",
+              "label": "Section 1 — caption",
+              "type": "string"
+            },
+            {
+              "name": "block_05",
+              "label": "Section 1 — text 1",
+              "type": "text"
+            },
+            {
+              "name": "block_06",
+              "label": "Section 1 — subheading 1",
+              "type": "string"
+            },
+            {
+              "name": "block_07",
+              "label": "Section 1 — text 2",
+              "type": "text"
+            },
+            {
+              "name": "block_08",
+              "label": "Section 1 — subheading 2",
+              "type": "string"
+            },
+            {
+              "name": "block_09",
+              "label": "Section 1 — text 3",
+              "type": "text"
+            },
+            {
+              "name": "block_10",
+              "label": "Section 1 — subheading 3",
+              "type": "string"
+            },
+            {
+              "name": "block_11",
+              "label": "Section 1 — text 4",
+              "type": "text"
+            },
+            {
+              "name": "block_12",
+              "label": "Section 1 — subheading 4",
+              "type": "string"
+            },
+            {
+              "name": "block_13",
+              "label": "Section 1 — text 5",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "home",
+      "label": "About / home",
+      "type": "file",
+      "path": "docs/_data/home.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "text",
+          "label": "Text, headings & captions",
+          "type": "object",
+          "fields": [
+            {
+              "name": "block_01",
+              "label": "Main heading",
+              "type": "string"
+            },
+            {
+              "name": "block_02",
+              "label": "Introduction",
+              "type": "text"
+            },
+            {
+              "name": "block_03",
+              "label": "About me — section heading",
+              "type": "string"
+            },
+            {
+              "name": "block_04",
+              "label": "About me — biography",
+              "type": "text"
+            },
+            {
+              "name": "block_05",
+              "label": "Résumé — section heading",
+              "type": "string"
+            },
+            {
+              "name": "block_06",
+              "label": "Experience 1 — dates",
+              "type": "string"
+            },
+            {
+              "name": "block_07",
+              "label": "Experience 1 — company",
+              "type": "string"
+            },
+            {
+              "name": "block_08",
+              "label": "Experience 2 — dates",
+              "type": "string"
+            },
+            {
+              "name": "block_09",
+              "label": "Experience 2 — company",
+              "type": "string"
+            },
+            {
+              "name": "block_10",
+              "label": "Experience 3 — dates",
+              "type": "string"
+            },
+            {
+              "name": "block_11",
+              "label": "Experience 3 — company",
+              "type": "string"
+            },
+            {
+              "name": "block_12",
+              "label": "Experience 4 — dates",
+              "type": "string"
+            },
+            {
+              "name": "block_13",
+              "label": "Experience 4 — company",
+              "type": "string"
+            },
+            {
+              "name": "block_14",
+              "label": "Experience 5 — dates",
+              "type": "string"
+            },
+            {
+              "name": "block_15",
+              "label": "Experience 5 — company",
+              "type": "string"
+            },
+            {
+              "name": "block_16",
+              "label": "Experience 6 — dates",
+              "type": "string"
+            },
+            {
+              "name": "block_17",
+              "label": "Experience 6 — company",
+              "type": "string"
+            },
+            {
+              "name": "block_18",
+              "label": "Experience 7 — dates",
+              "type": "string"
+            },
+            {
+              "name": "block_19",
+              "label": "Experience 7 — company",
+              "type": "string"
+            },
+            {
+              "name": "block_20",
+              "label": "Skills — section heading",
+              "type": "string"
+            },
+            {
+              "name": "block_21",
+              "label": "Skill 1",
+              "type": "string"
+            },
+            {
+              "name": "block_22",
+              "label": "Skill 2",
+              "type": "string"
+            },
+            {
+              "name": "block_23",
+              "label": "Skill 3",
+              "type": "string"
+            },
+            {
+              "name": "block_24",
+              "label": "Skill 4",
+              "type": "string"
+            },
+            {
+              "name": "block_25",
+              "label": "Skill 5",
+              "type": "string"
+            },
+            {
+              "name": "block_26",
+              "label": "Skill 6",
+              "type": "string"
+            },
+            {
+              "name": "block_27",
+              "label": "Skill 7",
+              "type": "string"
+            },
+            {
+              "name": "block_28",
+              "label": "Skill 8",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "interaction_design",
+      "label": "Interaction design",
+      "type": "file",
+      "path": "docs/_data/interaction_design.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Browser tab title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text",
+          "label": "Text, headings & captions",
+          "type": "object",
+          "fields": [
+            {
+              "name": "block_01",
+              "label": "Main heading",
+              "type": "string"
+            },
+            {
+              "name": "block_02",
+              "label": "Introduction",
+              "type": "text"
+            },
+            {
+              "name": "block_03",
+              "label": "Section 1 — heading",
+              "type": "string"
+            },
+            {
+              "name": "block_04",
+              "label": "Section 1 — caption",
+              "type": "string"
+            },
+            {
+              "name": "block_05",
+              "label": "Section 1 — text 1",
+              "type": "text"
+            },
+            {
+              "name": "block_06",
+              "label": "Section 1 — text 2",
+              "type": "text"
+            },
+            {
+              "name": "block_07",
+              "label": "Section 1 — text 3",
+              "type": "text"
+            },
+            {
+              "name": "block_08",
+              "label": "Section 1 — text 4",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "images",
+          "label": "Images",
+          "type": "object",
+          "fields": [
+            {
+              "name": "image_01",
+              "label": "Interaction 1",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_02",
+              "label": "Interaction 2",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_03",
+              "label": "Interaction 3",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "prototyping",
+      "label": "Prototyping",
+      "type": "file",
+      "path": "docs/_data/prototyping.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Browser tab title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text",
+          "label": "Text, headings & captions",
+          "type": "object",
+          "fields": [
+            {
+              "name": "block_01",
+              "label": "Main heading",
+              "type": "string"
+            },
+            {
+              "name": "block_02",
+              "label": "Introduction",
+              "type": "text"
+            },
+            {
+              "name": "block_03",
+              "label": "Section 1 — heading",
+              "type": "string"
+            },
+            {
+              "name": "block_04",
+              "label": "Section 1 — caption",
+              "type": "string"
+            },
+            {
+              "name": "block_05",
+              "label": "Section 1 — text 1",
+              "type": "text"
+            },
+            {
+              "name": "block_06",
+              "label": "Section 1 — subheading 1",
+              "type": "string"
+            },
+            {
+              "name": "block_07",
+              "label": "Section 1 — text 2",
+              "type": "text"
+            },
+            {
+              "name": "block_08",
+              "label": "Section 1 — subheading 2",
+              "type": "string"
+            },
+            {
+              "name": "block_09",
+              "label": "Section 1 — text 3",
+              "type": "text"
+            },
+            {
+              "name": "block_10",
+              "label": "Section 1 — text 4",
+              "type": "string"
+            },
+            {
+              "name": "block_11",
+              "label": "Section 1 — text 5",
+              "type": "text"
+            },
+            {
+              "name": "block_12",
+              "label": "Section 1 — text 6",
+              "type": "string"
+            },
+            {
+              "name": "block_13",
+              "label": "Section 1 — text 7",
+              "type": "string"
+            },
+            {
+              "name": "block_14",
+              "label": "Section 1 — subheading 3",
+              "type": "string"
+            },
+            {
+              "name": "block_15",
+              "label": "Section 1 — text 8",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "name": "images",
+          "label": "Images",
+          "type": "object",
+          "fields": [
+            {
+              "name": "image_01",
+              "label": "Prototyping code",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "visual_design",
+      "label": "Visual design",
+      "type": "file",
+      "path": "docs/_data/visual_design.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Browser tab title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text",
+          "label": "Text, headings & captions",
+          "type": "object",
+          "fields": [
+            {
+              "name": "block_01",
+              "label": "Main heading",
+              "type": "string"
+            },
+            {
+              "name": "block_02",
+              "label": "Introduction",
+              "type": "text"
+            },
+            {
+              "name": "block_03",
+              "label": "Section 1 — heading",
+              "type": "string"
+            },
+            {
+              "name": "block_04",
+              "label": "Section 1 — caption",
+              "type": "string"
+            },
+            {
+              "name": "block_05",
+              "label": "Section 1 — text 1",
+              "type": "text"
+            },
+            {
+              "name": "block_06",
+              "label": "Section 1 — text 2",
+              "type": "string"
+            },
+            {
+              "name": "block_07",
+              "label": "Section 1 — text 3",
+              "type": "string"
+            },
+            {
+              "name": "block_08",
+              "label": "Section 1 — text 4",
+              "type": "text"
+            },
+            {
+              "name": "block_09",
+              "label": "Section 1 — text 5",
+              "type": "string"
+            },
+            {
+              "name": "block_10",
+              "label": "Section 1 — text 6",
+              "type": "text"
+            },
+            {
+              "name": "block_11",
+              "label": "Section 1 — text 7",
+              "type": "text"
+            },
+            {
+              "name": "block_12",
+              "label": "Section 2 — heading",
+              "type": "string"
+            },
+            {
+              "name": "block_13",
+              "label": "Section 2 — caption",
+              "type": "string"
+            },
+            {
+              "name": "block_14",
+              "label": "Section 2 — text 1",
+              "type": "text"
+            },
+            {
+              "name": "block_15",
+              "label": "Section 2 — text 2",
+              "type": "string"
+            },
+            {
+              "name": "block_16",
+              "label": "Section 2 — text 3",
+              "type": "string"
+            },
+            {
+              "name": "block_17",
+              "label": "Section 2 — text 4",
+              "type": "string"
+            },
+            {
+              "name": "block_18",
+              "label": "Section 2 — text 5",
+              "type": "text"
+            },
+            {
+              "name": "block_19",
+              "label": "Section 2 — text 6",
+              "type": "text"
+            },
+            {
+              "name": "block_20",
+              "label": "Section 2 — text 7",
+              "type": "text"
+            },
+            {
+              "name": "block_21",
+              "label": "Section 2 — text 8",
+              "type": "string"
+            },
+            {
+              "name": "block_22",
+              "label": "Section 3 — heading",
+              "type": "string"
+            },
+            {
+              "name": "block_23",
+              "label": "Section 3 — caption",
+              "type": "string"
+            },
+            {
+              "name": "block_24",
+              "label": "Section 3 — text 1",
+              "type": "text"
+            },
+            {
+              "name": "block_25",
+              "label": "Section 3 — text 2",
+              "type": "text"
+            },
+            {
+              "name": "block_26",
+              "label": "Section 3 — text 3",
+              "type": "string"
+            },
+            {
+              "name": "block_27",
+              "label": "Section 3 — text 4",
+              "type": "string"
+            },
+            {
+              "name": "block_28",
+              "label": "Section 4 — heading",
+              "type": "string"
+            },
+            {
+              "name": "block_29",
+              "label": "Section 4 — caption",
+              "type": "string"
+            },
+            {
+              "name": "block_30",
+              "label": "Section 4 — text 1",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "name": "images",
+          "label": "Images",
+          "type": "object",
+          "fields": [
+            {
+              "name": "image_01",
+              "label": "Wreath",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_02",
+              "label": "Mockup Dropset 1",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_03",
+              "label": "Mockup Dropset 2",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_04",
+              "label": "Mockup Dropset 3",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_05",
+              "label": "Mockup Dropset 4",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_06",
+              "label": "Mockup Dropset 5",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_07",
+              "label": "Mockup Dropset 6",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_08",
+              "label": "Mockup Dropset 7",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_09",
+              "label": "Mockup Dropset 8",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_10",
+              "label": "Mockup Dropset 9",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_11",
+              "label": "Dropset web",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_12",
+              "label": "Wreath onepagelove",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_13",
+              "label": "Wreath designerdaily",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_14",
+              "label": "Dropset artwork",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_15",
+              "label": "Dropset logo",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_16",
+              "label": "Scandinavian tagline",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_17",
+              "label": "Scandinavian associations",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_18",
+              "label": "Scandinavian palette",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_19",
+              "label": "Scandinavian lists",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_20",
+              "label": "Scandinavian photography",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_21",
+              "label": "Scandinavian squircle",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_22",
+              "label": "Scandinavian typesettings",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_23",
+              "label": "Fintive 1",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_24",
+              "label": "Fintive 2",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_25",
+              "label": "Fintive logotype",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_26",
+              "label": "Archetypes 1",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_27",
+              "label": "Archetypes 2",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_28",
+              "label": "Archetypes 3",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_29",
+              "label": "Archetypes 4",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "image_30",
+              "label": "Archetypes 5",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Image",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Description for accessibility",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "links",
+          "label": "External links",
+          "type": "object",
+          "fields": [
+            {
+              "name": "link_01",
+              "label": "https://apps.apple.com/us/app/hoops/id6444746146",
+              "type": "string",
+              "description": "Use a full https:// address."
+            },
+            {
+              "name": "link_02",
+              "label": "https://getdropset.app/",
+              "type": "string",
+              "description": "Use a full https:// address."
+            },
+            {
+              "name": "link_03",
+              "label": "https://getdropset.app/",
+              "type": "string",
+              "description": "Use a full https:// address."
+            },
+            {
+              "name": "link_04",
+              "label": "https://onepagelove.com/dropset",
+              "type": "string",
+              "description": "Use a full https:// address."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

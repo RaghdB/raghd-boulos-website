@@ -1,0 +1,11 @@
+---
+layout: null
+---
+{ "files": {
+  "shared": {{ site.data.shared | jsonify }},
+  "home": {{ site.data.home | jsonify }},
+  "visual_design": {{ site.data.visual_design | jsonify }},
+  "interaction_design": {{ site.data.interaction_design | jsonify }},
+  "architecture": {{ site.data.architecture | jsonify }},
+  "prototyping": {{ site.data.prototyping | jsonify }}
+} }

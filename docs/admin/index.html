@@ -1,1 +1,418 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'"><title>Website editor</title><style>body{font:18px system-ui;max-width:620px;margin:12vh auto;padding:24px;color:#222;background:#fafafa}h1{font-size:36px}p{line-height:1.6}code{background:#eee;padding:4px 7px;border-radius:5px}a{color:#285c43}.note{color:#666;font-size:15px}</style></head><body><h1>Edit on your Mac</h1><p>Open <strong>Start Website Editor.command</strong> in your website folder. It opens a private local editor with fields for your page text, contact details and images.</p><p>Click <strong>Save locally</strong> to keep a draft, or <strong>Publish to website</strong> to update GitHub.</p><p class="note">There is no public editing service. The editor runs only on your Mac. GitHub handles sign-in and publishing.</p><p><a href="https://github.com/RaghdB/raghd-boulos-website#readme">Setup and editing guide</a></p></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-7ZFOQO0UOFbif5BoC7Yc3xfXv4tcGagvWaGt+sJxSXY=' 'sha256-QQriqebaUkHvR7xgitpE4CM5pp5qYtnxdckd7dYw2Uw='; style-src 'sha256-r3pDIJYJGdJXtYGaQyLa2WF3Hp+lW2m4PnSSo3bYbBQ='; connect-src 'self' https://api.github.com; img-src 'self' blob: data:; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="referrer" content="no-referrer"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Portfolio · Browser editor</title>
+<style>
+:root{color-scheme:light;--ink:#202b25;--muted:#647269;--line:#dce3dc;--green:#285c43;--paper:#fff;--wash:#f4f6f1}*{box-sizing:border-box}[hidden]{display:none!important}body{margin:0;background:var(--wash);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,textarea{font:inherit}button,a,input,textarea,summary{outline-offset:4px}button{cursor:pointer;border:1px solid var(--line);border-radius:8px;background:white;padding:10px 15px;color:var(--ink);font-weight:600}button:hover{background:#edf2ec}button:disabled{opacity:.5;cursor:wait}.primary{background:var(--green);color:white;border-color:var(--green)}.primary:hover{background:#204c37}a{color:var(--green)}.shell{display:grid;grid-template-columns:255px 1fr;min-height:100vh}aside{background:#eaf0e7;border-right:1px solid var(--line);padding:30px 20px;position:sticky;top:0;height:100vh;overflow:auto}.brand-dot{color:#6b9478}.brand{font-weight:750;font-size:21px;letter-spacing:-.6px}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:1.6px;color:var(--muted);font-weight:700}.badge{display:inline-flex;gap:7px;align-items:center;margin:12px 0 27px;font-size:12px;color:var(--green)}.badge:before{content:"";background:#478365;width:7px;height:7px;border-radius:100%}nav{display:grid;gap:5px}nav button{border:0;background:transparent;text-align:left;font-weight:500;padding:11px 13px}nav button[aria-current=page]{background:white;box-shadow:0 1px 3px #203a2010;font-weight:700}.aside-note{font-size:12px;color:var(--muted);margin-top:30px}main{min-width:0}.top{padding:24px 38px;background:#ffffffd9;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px;position:sticky;top:0;z-index:2;backdrop-filter:blur(12px)}.actions{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.site-link{font-size:13px;text-decoration:none;margin-right:9px}.state{font-size:13px;color:var(--muted)}.content{max-width:970px;padding:34px 38px 80px;margin:auto}h1{font-size:32px;line-height:1.2;letter-spacing:-1px;margin:9px 0 12px}.intro{color:var(--muted);margin:0 0 24px;max-width:660px}.notice{padding:13px 16px;border:1px solid var(--line);background:#edf3e9;border-radius:9px;margin-bottom:24px;white-space:pre-wrap;overflow-wrap:anywhere}.notice.error{background:#fff0eb;border-color:#e8beb0;color:#8a3422}.notice:empty{display:none}.group{border:1px solid var(--line);border-radius:12px;background:white;margin:0 0 20px;overflow:hidden}summary{padding:17px 20px;cursor:pointer;font-weight:650;background:#fbfcf9}summary small{color:var(--muted);font-weight:400;margin-left:10px}.fields{padding:5px 20px 20px}.fields>.group{margin-top:15px}.field{padding:17px 0;border-bottom:1px solid #eef1eb}.field:last-child{border-bottom:0;padding-bottom:0}.field label{display:block;font-weight:600;margin-bottom:7px;overflow-wrap:anywhere}.field .hint{font-size:12px;color:var(--muted);margin:7px 0 0}.key{font-size:11px;letter-spacing:.5px;color:var(--muted);font-weight:500;margin-bottom:4px}input[type=text],input[type=password],textarea{display:block;width:100%;border:1px solid #cad4c9;border-radius:7px;background:#fff;padding:10px 12px;color:var(--ink);line-height:1.5}input:focus,textarea:focus{outline:2px solid #58846b;border-color:transparent}textarea{resize:vertical;min-height:140px}.image-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:10px}.image-row img{width:100px;height:76px;object-fit:contain;background:#f2f4ef;border:1px solid var(--line);border-radius:6px}.image-row span{font-size:12px;color:var(--muted)}.loading{padding:28px;background:white;border:1px solid var(--line);border-radius:12px}.connection{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:18px 20px;border:1px solid var(--line);border-radius:12px;background:white;margin-bottom:30px}.connection strong{color:var(--ink);display:block;font-size:15px}.connection p{font-size:13px;color:var(--muted);margin:4px 0}.connection-actions{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.device-code{display:block;font:700 25px/1.5 ui-monospace,monospace;letter-spacing:3px;user-select:all;margin:8px 0}.github-link{display:inline-block;padding:10px 15px;background:var(--green);color:white;border-radius:8px;text-decoration:none;font-weight:600}.connection [hidden]{display:none}@media(max-width:580px){.connection{align-items:flex-start;flex-direction:column}}@media(max-width:850px){.shell{grid-template-columns:200px 1fr}aside{padding:25px 12px}.top{padding:18px 22px;align-items:flex-start;flex-direction:column;gap:12px}.content{padding:25px 22px 60px}}@media(max-width:580px){.shell{display:block}aside{position:static;height:auto;padding:18px;border-right:0;border-bottom:1px solid var(--line)}.brand-dot{color:#6b9478}.brand{display:inline-block}.badge{margin:0 0 0 15px}nav{display:flex;overflow:auto;margin-top:16px;padding-bottom:5px}nav button{flex-shrink:0}.aside-note{display:none}.top{position:static;padding:18px}.content{padding:23px 18px 60px}h1{font-size:28px}.fields{padding:0 15px 16px}summary{padding:15px}.site-link{width:100%}.actions{width:100%}.actions button{flex:1}}
+dialog{max-width:570px;width:calc(100% - 32px);border:1px solid var(--line);border-radius:15px;padding:27px;color:var(--ink);box-shadow:0 20px 80px #15291d35}dialog::backdrop{background:#172b2466}dialog h2{margin:0 0 12px;font-size:24px}dialog p,dialog li{color:var(--muted);font-size:14px}dialog label{display:block;font-weight:650;margin:20px 0 8px}.dialog-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:22px}#connect-error{color:#8a3422;font-size:13px}dialog a{display:inline-block;margin:5px 0}</style>
+</head>
+<body>
+<div class="shell">
+<aside><div class="brand">Portfolio editor<span class="brand-dot">.</span></div><div class="badge">Browser editor</div><div class="eyebrow">Your pages</div><nav id="pages" aria-label="Portfolio pages"></nav><p class="aside-note">Your existing portfolio, with simple fields for text and images.<br><br>Drafts stay in this browser. GitHub handles connection and publishing. No extra online service.</p></aside>
+<main>
+<header class="top"><div><div class="eyebrow">Content workspace</div><div id="save-state" class="state" role="status">Loading your content…</div></div><div class="actions"><a class="site-link" href="https://raghdb.github.io/raghd-boulos-website/" target="_blank" rel="noopener noreferrer">Open website ↗</a><button id="save" disabled>Save draft</button><button id="publish" class="primary" disabled>Publish to website</button></div></header>
+<div class="content"><section id="connection" class="connection" aria-label="Website connection"><div><strong id="connection-title">Your website connection</strong><p id="connection-message" role="status" aria-live="polite">Checking your connection…</p></div><div class="connection-actions"><button id="connect" type="button" disabled>Connect GitHub</button><button id="disconnect" type="button" hidden>Disconnect</button></div></section><h1 id="page-title">Your portfolio</h1><p class="intro">Choose a page, edit its fields, then save a local draft or publish your changes to the website.</p><div id="notice" class="notice" role="status" aria-live="polite"></div><form id="editor" novalidate><div class="loading">Loading your pages…</div></form><button id="retry" hidden>Reload content</button> <button id="restore" type="button">Restore published version</button></div>
+</main></div>
+<dialog id="connect-dialog" aria-labelledby="connect-heading"><form id="connect-form"><h2 id="connect-heading">Connect your GitHub account</h2><p>Create an access key once, restricted to this website. Paste it below whenever you open a new editing session.</p><ol><li>On GitHub, select <strong>Only select repositories</strong>, then <strong>raghd-boulos-website</strong>.</li><li>Under Repository permissions, set <strong>Contents</strong> to <strong>Read and write</strong>. Leave administration permissions disabled.</li><li>Create the key, copy it, and return here.</li></ol><a href="https://github.com/settings/personal-access-tokens/new?name=Website+Editor&amp;target_name=RaghdB&amp;expires_in=90&amp;contents=write&amp;metadata=read" target="_blank" rel="noopener noreferrer">Create a website access key on GitHub ↗</a><label for="access-key">Paste your access key</label><input id="access-key" type="password" autocomplete="off" spellcheck="false" autocapitalize="off" required><p>Your key is kept only in this tab’s memory and forgotten when the tab closes. It is never saved with your draft or website.</p><div id="connect-error" role="alert"></div><div class="dialog-actions"><button id="cancel-connect" type="button">Cancel</button><button id="submit-connect" class="primary" type="submit">Connect securely</button></div></form></dialog>
+<script>/* GitHub-only publishing transport. Credentials live only in this closure. */
+(() => {
+  'use strict';
+  if (window.top !== window.self) throw new Error('Open the website editor in its own browser tab.');
+  const REPO = 'RaghdB/raghd-boulos-website';
+  const LIVE = 'https://raghdb.github.io/raghd-boulos-website/';
+  const PATHS = Object.freeze({shared:'docs/_data/shared.json', architecture:'docs/_data/architecture.json', home:'docs/_data/home.json', interaction_design:'docs/_data/interaction_design.json', prototyping:'docs/_data/prototyping.json', visual_design:'docs/_data/visual_design.json'});
+  const NAMES = Object.keys(PATHS);
+  const encoder = new TextEncoder();
+  const generated = /^\/assets\/uploads\/[a-f0-9]{32}\.(png|jpg|gif|webp)$/;
+  const uploads = new Map();
+  const previews = new Map();
+  let credential = null, schema, initial, files, baseline, originalAssets, busy = false, restored = false, connectionVersion = 0;
+  const copy = value => JSON.parse(JSON.stringify(value));
+  const object = value => value !== null && typeof value === 'object' && !Array.isArray(value);
+  const sameKeys = (a, b) => object(a) && object(b) && Object.keys(a).length === Object.keys(b).length && Object.keys(b).every(key => Object.prototype.hasOwnProperty.call(a, key));
+  const canonical = value => object(value) ? '{' + Object.keys(value).sort().map(key => JSON.stringify(key) + ':' + canonical(value[key])).join(',') + '}' : JSON.stringify(value);
+  const equal = (a,b) => canonical(a) === canonical(b);
+  const dataJSON = value => encoder.encode(JSON.stringify(value, null, 2) + '\n');
+  const imagePaths = value => new Set(Object.values(value).flatMap(content => Object.values(content.images || {}).map(image => image.src)));
+  const problem = message => new Error(message);
+
+  async function snapshot(name) {
+    const url = new URL(name, window.location.href);
+    if (url.origin !== window.location.origin) throw problem('Invalid editor configuration.');
+    const response = await fetch(url, {redirect:'error', cache:'no-store', credentials:'same-origin', referrerPolicy:'no-referrer'});
+    if (!response.ok) throw problem('Could not load the website editor files. Reload this page.');
+    return response.json();
+  }
+
+  function database() {
+    return new Promise((resolve, reject) => {
+      if (!window.indexedDB) { reject(problem('This browser cannot save drafts. Use a browser with IndexedDB enabled.')); return; }
+      const request = indexedDB.open('raghd-portfolio-editor', 1);
+      request.onupgradeneeded = () => request.result.createObjectStore('drafts');
+      request.onsuccess = () => resolve(request.result);
+      request.onerror = () => reject(problem('Could not open draft storage. Enable website storage in this browser.'));
+      request.onblocked = () => reject(problem('Close other editor tabs, then try saving again.'));
+    });
+  }
+
+  async function storedDraft(value, writing = false) {
+    const db = await database();
+    try {
+      return await new Promise((resolve, reject) => {
+        const transaction = db.transaction('drafts', writing ? 'readwrite' : 'readonly');
+        const store = transaction.objectStore('drafts');
+        const request = writing ? store.put(value, 'portfolio') : store.get('portfolio');
+        let result;
+        request.onsuccess = () => { result = request.result; };
+        transaction.oncomplete = () => resolve(result);
+        transaction.onerror = transaction.onabort = () => reject(problem('Could not save the draft and images. Check browser storage space and try again. Keep this tab open.'));
+      });
+    } finally { db.close(); }
+  }
+
+  function raster(bytes) {
+    const u = new Uint8Array(bytes);
+    const begins = signature => signature.every((n,i) => u[i] === n);
+    if (begins([137,80,78,71,13,10,26,10])) return ['png','image/png'];
+    if (begins([255,216,255])) return ['jpg','image/jpeg'];
+    if (begins([71,73,70,56,55,97]) || begins([71,73,70,56,57,97])) return ['gif','image/gif'];
+    if (u.length >= 12 && begins([82,73,70,70]) && u[8]===87 && u[9]===69 && u[10]===66 && u[11]===80) return ['webp','image/webp'];
+    throw problem('Choose a PNG, JPEG, GIF or WebP image. SVG uploads are not supported.');
+  }
+
+  function safeImage(src) {
+    if (typeof src !== 'string' || !src.startsWith('/assets/') || /[\\%?#\x00-\x1f\x7f]/.test(src) || src.includes('..')) throw problem('Choose an existing website image or upload a new image.');
+    if (originalAssets.has(src)) return;
+    if (generated.test(src) && uploads.has(src)) return;
+    throw problem('An image is missing. Upload it again.');
+  }
+
+  function validate(value) {
+    if (!sameKeys(value, PATHS)) throw problem('Submit all six website content forms. Reload the editor.');
+    function walk(next, original, location) {
+      if (object(original)) {
+        if (!sameKeys(next, original)) throw problem('Unexpected fields in ' + location + '. Reload the editor.');
+        Object.keys(original).forEach(key => walk(next[key], original[key], location + '.' + key));
+        return;
+      }
+      if (typeof original !== 'string' || typeof next !== 'string' || next.length > 100000) throw problem('Invalid text in ' + location + '.');
+      if (location.includes('.links.')) {
+        let url;
+        try { url = new URL(next); } catch (_) { throw problem('External links must use a valid https:// address.'); }
+        if (url.protocol !== 'https:' || !url.hostname || url.username || url.password || /[\s\x00-\x1f\x7f]/.test(next)) throw problem('External links must use a valid https:// address.');
+      }
+      if (location.includes('.images.') && location.endsWith('.src')) safeImage(next);
+    }
+    NAMES.forEach(name => walk(value[name], initial[name], name));
+    if (NAMES.reduce((size,name) => size + dataJSON(value[name]).length, 0) > 1024*1024) throw problem('The content is too large. Shorten the text and try again.');
+  }
+
+  function draftRecord(next, nextBaseline) {
+    const used = imagePaths(next);
+    return {version:1, files:copy(next), baseline:copy(nextBaseline), uploads:[...uploads].filter(([path]) => used.has(path)).map(([path, value]) => ({path, bytes:value.bytes.slice(0), mime:value.mime}))};
+  }
+
+  function checkConfiguration(nextSchema, nextFiles) {
+    if (!sameKeys(nextFiles, PATHS) || !Array.isArray(nextSchema.content) || nextSchema.content.length !== NAMES.length || new Set(nextSchema.content.map(entry=>entry.name)).size !== NAMES.length || nextSchema.content.some(entry=>!NAMES.includes(entry.name) || PATHS[entry.name] !== entry.path)) throw problem('The editor configuration is invalid.');
+  }
+
+  let ready = (async () => {
+    const loaded = await Promise.all([snapshot('schema.json'), snapshot('content.json')]);
+    schema = loaded[0];
+    initial = loaded[1].files;
+    checkConfiguration(schema, initial);
+    files = copy(initial);
+    baseline = copy(initial);
+    originalAssets = imagePaths(initial);
+    let saved;
+    try { saved = await storedDraft(); }
+    catch (_) { /* Reading a draft is optional; explicit saves still report storage errors. */ }
+    if (saved) {
+      if (saved.version !== 1 || !sameKeys(saved.baseline, PATHS) || !Array.isArray(saved.uploads)) throw problem('The saved draft is invalid. Keep a backup before clearing this site’s browser storage.');
+      for (const upload of saved.uploads) {
+        if (!generated.test(upload.path) || !(upload.bytes instanceof ArrayBuffer) || upload.bytes.byteLength > 10*1024*1024) throw problem('A saved draft image is invalid.');
+        const [ext,mime] = raster(upload.bytes);
+        if (mime !== upload.mime || !upload.path.endsWith('.' + ext)) throw problem('A saved draft image is invalid.');
+        uploads.set(upload.path, {bytes:upload.bytes, mime});
+      }
+      // A published baseline may reference uploads not in the latest deployed snapshot.
+      for (const src of imagePaths(saved.baseline)) if (generated.test(src)) originalAssets.add(src);
+      validate(saved.baseline);
+      validate(saved.files);
+      files = copy(saved.files);
+      baseline = copy(saved.baseline);
+      restored = true;
+    }
+    validate(files);
+  })();
+  // Defer errors to API callers; avoid an unhandled rejection during page loading.
+  ready.catch(() => {});
+
+  async function api(route, method='GET', body=null, auth=credential) {
+    if (typeof auth !== 'string' || !/^github_pat_[A-Za-z0-9_]{20,240}$/.test(auth)) throw problem('Connect GitHub with a fine-grained personal access token before publishing.');
+    if (typeof route !== 'string' || !/^[A-Za-z0-9_/?=.-]+$/.test(route) || route.includes('..') || route.startsWith('/')) throw problem('Invalid GitHub request.');
+    const url = new URL('https://api.github.com/' + route);
+    if (url.protocol !== 'https:' || url.hostname !== 'api.github.com') throw problem('Invalid GitHub request.');
+    let response;
+    try {
+      response = await fetch(url, {method, redirect:'error', credentials:'omit', cache:'no-store', referrerPolicy:'no-referrer', headers:{'Authorization':'Bearer ' + auth, 'Accept':'application/vnd.github+json', 'X-GitHub-Api-Version':'2022-11-28', ...(body ? {'Content-Type':'application/json'} : {})}, ...(body ? {body:JSON.stringify(body)} : {})});
+    } catch (_) { throw problem('GitHub could not be reached. Your draft is safe. Check your internet connection and try again.'); }
+    if (!response.ok) {
+      if (response.status === 401) throw problem('The GitHub token is invalid or expired. Connect GitHub again.');
+      if (response.status === 403) throw problem('GitHub denied access. Check the token’s repository permissions, or wait if GitHub is limiting requests.');
+      if (response.status === 404) throw problem('Give the token access to RaghdB/raghd-boulos-website and Contents read and write permission.');
+      if (response.status === 409 || response.status === 422) throw problem('The website changed on GitHub while publishing. Nothing was force-pushed. Review remote changes before trying again.');
+      throw problem('GitHub could not finish the request (HTTP ' + response.status + '). Your draft is safe.');
+    }
+    let result;
+    try {
+      const text = await response.text();
+      if (text.length > 32*1024*1024) throw problem('Large response');
+      result = JSON.parse(text);
+    } catch (_) { throw problem('GitHub returned an unexpected response. Publishing stopped safely.'); }
+    if (!object(result)) throw problem('GitHub returned an unexpected response.');
+    return result;
+  }
+
+  async function verify(auth) {
+    const user = await api('user', 'GET', null, auth);
+    if (user.login !== 'RaghdB') throw problem('Connect the RaghdB GitHub account that owns this website.');
+    const repo = await api('repos/' + REPO, 'GET', null, auth);
+    if (repo.full_name !== REPO) throw problem('This token cannot access the website repository.');
+    if (repo.permissions && repo.permissions.push === false) throw problem('Allow Contents read and write access to this website repository.');
+  }
+
+  window.websiteEditorConnect = async token => {
+    if (busy) throw problem('Wait for the current save or publish to finish.');
+    if (!token) return window.websiteEditorDisconnect();
+    if (typeof token !== 'string' || !/^github_pat_[A-Za-z0-9_]{20,240}$/.test(token)) throw problem('Use a fine-grained GitHub personal access token beginning with github_pat_.');
+    const version = ++connectionVersion;
+    credential = null;
+    await verify(token);
+    if (connectionVersion !== version) throw problem('This connection attempt was cancelled.');
+    credential = token;
+    return {state:'connected', message:'GitHub connected. You can now publish.'};
+  };
+
+  window.websiteEditorDisconnect = () => {
+    if (busy) throw problem('Wait for the current save or publish to finish.');
+    ++connectionVersion;
+    credential = null;
+    return {state:'idle', message:'Disconnected. The token has been forgotten.'};
+  };
+
+  window.websiteEditorImagePreview = src => {
+    if (uploads.has(src)) {
+      if (!previews.has(src)) {
+        const value = uploads.get(src);
+        previews.set(src, URL.createObjectURL(new Blob([value.bytes], {type:value.mime})));
+      }
+      return previews.get(src);
+    }
+    if (typeof src !== 'string' || !src.startsWith('/assets/') || /[\\%?#\x00-\x1f\x7f]/.test(src) || src.includes('..')) return '';
+    return new URL('../' + src.slice(1), window.location.href).href;
+  };
+
+  function sha(value) {
+    if (typeof value !== 'string' || !/^[a-f0-9]{40}$/.test(value)) throw problem('GitHub returned an invalid revision. Publishing stopped safely.');
+    return value;
+  }
+
+  function base64(bytes) {
+    const data = new Uint8Array(bytes);
+    let value = '';
+    for (let i=0; i<data.length; i+=0x8000) value += String.fromCharCode(...data.subarray(i,i+0x8000));
+    return btoa(value);
+  }
+
+  function unbase64(encoded) {
+    const clean = encoded.replace(/\s/g,'');
+    if (clean.length > 2*1024*1024 || !/^[A-Za-z0-9+/]*={0,2}$/.test(clean)) throw problem('GitHub returned an invalid content file.');
+    let decoded;
+    try { decoded = atob(clean); } catch (_) { throw problem('GitHub returned an invalid content file.'); }
+    return Uint8Array.from(decoded, c => c.charCodeAt(0));
+  }
+
+  async function blobSHA(bytes) {
+    const data = new Uint8Array(bytes);
+    const header = encoder.encode('blob ' + data.byteLength + '\0');
+    const combined = new Uint8Array(header.length + data.length);
+    combined.set(header); combined.set(data,header.length);
+    const digest = await crypto.subtle.digest('SHA-1',combined);
+    return [...new Uint8Array(digest)].map(n=>n.toString(16).padStart(2,'0')).join('');
+  }
+
+  async function uploadBlob(bytes, auth) {
+    const blob = await api('repos/' + REPO + '/git/blobs', 'POST', {content:base64(bytes), encoding:'base64'}, auth);
+    return sha(blob.sha);
+  }
+
+  async function publish(next) {
+    validate(next);
+    const auth = credential;
+    if (!auth) throw problem('Connect GitHub before publishing.');
+    // Commit the entire draft and pending image bytes to browser storage first.
+    await storedDraft(draftRecord(next, baseline), true);
+    files = copy(next);
+    await verify(auth);
+    const prefix = 'repos/' + REPO + '/git/';
+    const ref = await api(prefix + 'ref/heads/main', 'GET', null, auth);
+    const head = sha(ref.object && ref.object.sha);
+    const commit = await api(prefix + 'commits/' + head, 'GET', null, auth);
+    const baseTree = sha(commit.tree && commit.tree.sha);
+    const tree = await api(prefix + 'trees/' + baseTree + '?recursive=1', 'GET', null, auth);
+    if (tree.truncated || !Array.isArray(tree.tree)) throw problem('The repository could not be checked completely. Publishing stopped safely.');
+    const remote = new Map(tree.tree.map(entry => [entry.path,entry]));
+    const current = {};
+    for (const name of NAMES) {
+      const entry = remote.get(PATHS[name]);
+      if (!entry || entry.type !== 'blob' || entry.mode !== '100644') throw problem('Website content changed on GitHub. Publishing stopped to protect that edit. Review the remote and local differences.');
+      const blob = await api(prefix + 'blobs/' + sha(entry.sha), 'GET', null, auth);
+      let parsed;
+      try {
+        if (blob.encoding !== 'base64' || typeof blob.content !== 'string') throw problem('Invalid content');
+        parsed = JSON.parse(new TextDecoder('utf-8', {fatal:true}).decode(unbase64(blob.content)));
+      } catch (_) { throw problem('A website content file on GitHub is invalid. Publishing stopped safely.'); }
+      if (!equal(parsed, baseline[name])) throw problem('Website content changed on GitHub since this draft began. Publishing stopped to protect that edit. Review the remote and local differences before publishing.');
+      current[name] = parsed;
+    }
+    const entries = [];
+    for (const name of NAMES) if (!equal(current[name],next[name])) entries.push({path:PATHS[name],mode:'100644',type:'blob',sha:await uploadBlob(dataJSON(next[name]), auth)});
+    for (const src of [...imagePaths(next)].sort()) {
+      if (!generated.test(src) || !uploads.has(src)) continue;
+      const value = uploads.get(src);
+      const entry = remote.get('docs' + src);
+      const checksum = await blobSHA(value.bytes);
+      if (entry) {
+        if (entry.type !== 'blob' || entry.mode !== '100644' || entry.sha !== checksum) throw problem('An uploaded image conflicts with a file on GitHub. Upload it again to create a new image.');
+        continue;
+      }
+      entries.push({path:'docs' + src, mode:'100644',type:'blob',sha:await uploadBlob(value.bytes, auth)});
+    }
+    let revision = null;
+    if (entries.length) {
+      const newTree = await api(prefix + 'trees', 'POST', {base_tree:baseTree,tree:entries}, auth);
+      const newCommit = await api(prefix + 'commits', 'POST', {message:'Update portfolio content', tree:sha(newTree.sha), parents:[head]}, auth);
+      revision = sha(newCommit.sha);
+      await api(prefix + 'refs/heads/main', 'PATCH', {sha:revision,force:false}, auth);
+    }
+    baseline = copy(next);
+    try { await storedDraft(draftRecord(next, baseline), true); }
+    catch (_) { throw problem('GitHub accepted the website update, but this browser could not save the updated publishing history. Keep this tab open and save the draft again before reloading.'); }
+    return {ok:true, url:LIVE, ...(revision ? {commit:'https://github.com/' + REPO + '/commit/' + revision} : {}), message:revision ? 'Published to GitHub. The live website will update when GitHub Pages finishes building, usually within a few minutes.' : 'Your website is already up to date.'};
+  }
+
+  async function resetDraft() {
+    // This also recovers from an invalid saved draft; wait for boot to settle first.
+    await ready.catch(() => {});
+    const loaded = await Promise.all([snapshot('schema.json'), snapshot('content.json')]);
+    checkConfiguration(loaded[0], loaded[1].files);
+    const previous = {schema,initial,files,baseline,originalAssets};
+    try {
+      schema = loaded[0];
+      initial = copy(loaded[1].files);
+      originalAssets = imagePaths(initial);
+      validate(initial);
+      await storedDraft({version:1,files:copy(initial),baseline:copy(initial),uploads:[]},true);
+      files = copy(initial); baseline = copy(initial); restored = false;
+      uploads.clear();
+      for (const url of previews.values()) URL.revokeObjectURL(url);
+      previews.clear();
+      ready = Promise.resolve();
+      return {ok:true,files:copy(files),message:'The saved draft was discarded. The current deployed website content is loaded.'};
+    } catch (error) {
+      ({schema,initial,files,baseline,originalAssets} = previous);
+      throw error;
+    }
+  }
+
+  window.websiteEditorApi = async (path, body=null) => {
+    if (path === '/api/reset') {
+      if (!sameKeys(body,{})) throw problem('Unexpected request fields.');
+      if (busy) throw problem('Another save or publish is running. Please wait.');
+      busy = true;
+      try { return await resetDraft(); } finally { busy = false; }
+    }
+    await ready;
+    if (path === '/api/content' && body === null) return {schema:copy(schema),files:copy(files),status:{authenticated:!!credential,repo:REPO,draftRestored:restored,message:restored ? 'Your saved draft and images were restored in this browser.' : 'Connect GitHub to publish. Drafts are saved only in this browser.'}};
+    if (path === '/api/connection' && body === null) return {state:credential?'connected':'idle', message:credential?'GitHub connected.':'Connect GitHub to publish.'};
+    if (busy) throw problem('Another save or publish is running. Please wait.');
+    busy = true;
+    try {
+      if (path === '/api/save' || path === '/api/publish') {
+        if (!sameKeys(body,{files:null})) throw problem('Unexpected request fields.');
+        const next = copy(body.files);
+        validate(next);
+        if (path === '/api/publish') return await publish(next);
+        await storedDraft(draftRecord(next,baseline),true);
+        files = next;
+        return {ok:true,message:'Saved in this browser, including uploaded images. Click Publish to website when you’re ready.'};
+      }
+      if (path === '/api/upload') {
+        if (!sameKeys(body,{filename:null,mime:null,data:null}) || typeof body.filename !== 'string' || typeof body.mime !== 'string' || typeof body.data !== 'string' || body.data.length > 14*1024*1024 || !/^[A-Za-z0-9+/]*={0,2}$/.test(body.data)) throw problem('Invalid image upload.');
+        let bytes;
+        try { const value = atob(body.data); bytes = Uint8Array.from(value,c=>c.charCodeAt(0)); } catch (_) { throw problem('Invalid image upload.'); }
+        if (!bytes.length || bytes.length > 10*1024*1024) throw problem('Choose an image smaller than 10 MB.');
+        const [ext,mime] = raster(bytes);
+        const suffix = body.filename.split('.').pop().toLowerCase();
+        if (body.mime !== mime || (suffix !== ext && !(ext==='jpg' && suffix==='jpeg'))) throw problem('The image format does not match its filename.');
+        const key = [...crypto.getRandomValues(new Uint8Array(16))].map(n=>n.toString(16).padStart(2,'0')).join('');
+        const src = '/assets/uploads/' + key + '.' + ext;
+        uploads.set(src,{bytes:bytes.buffer,mime});
+        return {path:src};
+      }
+      throw problem('Unknown editor request.');
+    } finally { busy = false; }
+  };
+})();
+</script>
+<script>
+'use strict';
+if(window.top!==window.self){document.documentElement.replaceChildren();throw new Error('Open the editor directly.')}
+const liveAdapter=typeof window.websiteEditorApi==='function';
+const $=id=>document.getElementById(id);
+let files={},schema=[],selected='',saved='',published='',busy=false,loaded=false,sequence=0,authenticated=false,hasDraft=false;
+const pageOrder=['shared','home','visual_design','interaction_design','architecture','prototyping'];
+const pageNames={shared:'Contact & navigation',home:'About',visual_design:'Visual design',interaction_design:'Interaction design',architecture:'Architecture',prototyping:'Prototyping'};
+function pageName(page){return pageNames[page.name]||page.label||page.name}
+function friendlyError(error){const message=error.message||'Something went wrong. Please try again.';return /gh auth|authentication|not logged|sign.in|unauthori[sz]ed|credentials/i.test(message)?'Connect GitHub using the button above, then try again. Your edits are still here.':message}
+function node(tag,cls,text){const el=document.createElement(tag);if(cls)el.className=cls;if(text!==undefined)el.textContent=text;return el}
+function snapshot(){return JSON.stringify(files)}
+window.websiteEditorHasUnsavedChanges=()=>busy||(loaded&&snapshot()!==saved);
+function notice(message,error=false){$('notice').textContent=message;$('notice').classList.toggle('error',error);$('notice').setAttribute('role',error?'alert':'status')}
+function update(){const dirty=loaded&&snapshot()!==saved;$('save-state').textContent=busy?'Working…':dirty?'Unsaved changes':loaded?(snapshot()===published?'All changes published':hasDraft?'Draft saved in this browser':'Ready to edit'):'Content unavailable';$('save').disabled=!loaded||busy;$('publish').disabled=!loaded||busy||!authenticated;$('disconnect').disabled=busy;$('restore').disabled=busy;$('connect').disabled=busy||!liveAdapter;document.querySelectorAll('#editor input,#editor textarea,#editor button').forEach(el=>el.disabled=busy);document.querySelectorAll('#pages button').forEach(el=>el.disabled=busy)}
+async function api(path,body){if(!liveAdapter)throw new Error('The editor could not start. Reload this page and try again.');return await window.websiteEditorApi(path,body)}
+function setValue(path,value){let target=files[selected];for(const key of path.slice(0,-1)){if(!target[key]||typeof target[key]!=='object')target[key]={};target=target[key]}target[path[path.length-1]]=value;update()}
+function safePreview(value){if(typeof value!=='string'||!value.startsWith('/assets/')||value.includes('..')||value.includes('\\')||/[?#]/.test(value))return '';return typeof window.websiteEditorImagePreview==='function'?window.websiteEditorImagePreview(value):'/raghd-boulos-website'+value}
+function renderFields(fields,data,parent,path=[]){for(const field of fields||[]){const current=[...path,field.name];if(field.type==='object'){const group=node('details','group');group.open=path.length===0;const summary=node('summary','',field.label||field.name);summary.append(node('small','',`${(field.fields||[]).length} fields`));group.append(summary);const children=node('div','fields');renderFields(field.fields,data?.[field.name]||{},children,current);group.append(children);parent.append(group);continue}const wrap=node('div','field');const id='field-'+(++sequence);const label=node('label','',field.label||field.name);label.htmlFor=id;wrap.append(label);const input=node(field.type==='text'?'textarea':'input');if(input.tagName==='INPUT')input.type='text';input.id=id;if(field.type==='image')input.hidden=true;input.value=data?.[field.name]??'';input.required=!!field.required;input.addEventListener('input',()=>setValue(current,input.value));wrap.append(input);if(field.description)wrap.append(node('p','hint',field.description));if(field.type==='image'){const row=node('div','image-row');const preview=node('img');preview.alt='Current image preview';preview.loading='lazy';preview.referrerPolicy='no-referrer';const refresh=()=>{const src=safePreview(input.value);preview.hidden=!src;if(src)preview.src=src;else preview.removeAttribute('src')};preview.addEventListener('error',()=>preview.hidden=true);refresh();input.addEventListener('change',refresh);const pick=node('input');pick.type='file';pick.accept='image/png,image/jpeg,image/webp,image/gif';pick.hidden=true;const button=node('button','','Choose image…');button.type='button';button.addEventListener('click',()=>pick.click());pick.addEventListener('change',async()=>{const file=pick.files[0];if(!file)return;if(!['image/png','image/jpeg','image/webp','image/gif'].includes(file.type)||file.size>10*1024*1024){notice('Choose a PNG, JPEG, WebP, or GIF image no larger than 10 MB.',true);pick.value='';return}busy=true;update();notice('Adding image to your draft…');try{const data=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(String(reader.result).split(',')[1]);reader.onerror=()=>reject(new Error('This image could not be read.'));reader.readAsDataURL(file)});const result=await api('/api/upload',{filename:file.name,mime:file.type,data});input.value=result.path;setValue(current,result.path);refresh();notice('Image added to this browser draft. Publish to website when you are ready to update the website.')}catch(error){notice(friendlyError(error),true)}finally{busy=false;pick.value='';update()}});row.append(preview,button,pick,node('span','','PNG, JPEG, WebP or GIF · up to 10 MB'));wrap.append(row)}parent.append(wrap)}}
+function render(){const page=schema.find(page=>page.name===selected);$('page-title').textContent=page?pageName(page):'Your portfolio';$('editor').replaceChildren();const card=node('div','group');const fields=node('div','fields');renderFields(page?.fields,files[selected],fields);card.append(fields);$('editor').append(card);document.querySelectorAll('#pages button').forEach(button=>{if(button.dataset.page===selected)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current')});update()}
+async function load(){if(loaded&&snapshot()!==saved){notice('Save your local changes before reloading content.',true);return}if(!liveAdapter){$('editor').replaceChildren(node('div','loading','Open your website’s /admin/ page to continue editing.'));notice('Please reopen the website editor to continue.',true);return}busy=true;$('retry').hidden=true;notice('');update();try{const result=await api('/api/content');files=result.files;schema=Array.isArray(result.schema)?result.schema:result.schema.content;if(!Array.isArray(schema)||!files)throw new Error('The editor did not return valid page content.');schema.sort((a,b)=>(pageOrder.includes(a.name)?pageOrder.indexOf(a.name):99)-(pageOrder.includes(b.name)?pageOrder.indexOf(b.name):99));saved=snapshot();published='';selected=schema.some(p=>p.name==='home')?'home':schema[0]?.name;loaded=true;$('pages').replaceChildren();for(const page of schema){const button=node('button','',pageName(page));button.type='button';button.dataset.page=page.name;button.addEventListener('click',()=>{selected=page.name;render()});$('pages').append(button)}const status=result.status||{};hasDraft=!!status.draftRestored;showConnection({state:status.authenticated?'connected':'disconnected'});render();if(status.message)notice(status.message)}catch(error){$('editor').replaceChildren(node('div','loading','Your pages could not be loaded. Reload this page and try again.'));notice(friendlyError(error),true);$('retry').hidden=false}finally{busy=false;update()}}
+async function action(kind){if(busy||!loaded)return;busy=true;update();notice(kind==='publish'?'Publishing your changes…':'Saving your local draft…');try{const result=await api('/api/'+kind,{files});saved=snapshot();hasDraft=true;if(kind==='publish')published=saved;notice(result.message||(kind==='publish'?'Changes sent. Your website is updating and may take a few minutes to show them.':'Draft saved in this browser. Publish when you are ready to update the website.'))}catch(error){notice(friendlyError(error),true)}finally{busy=false;update()}}
+
+function showConnection(result){
+ authenticated=result.state==='connected';
+ $('connection-title').textContent=authenticated?'Connected to your website':'Connect to publish your website';
+ $('connection-message').textContent=authenticated?'Connected for this tab only. Your access key is forgotten when this tab closes.':'Edit and save drafts in this browser. Connect GitHub when you’re ready to publish.';
+ $('connect').hidden=authenticated;$('disconnect').hidden=!authenticated;$('connect').disabled=!liveAdapter;update();
+}
+function connect(){if(!liveAdapter)return;$('access-key').value='';$('connect-error').textContent='';$('connect-dialog').showModal();$('access-key').focus()}
+function closeConnect(){$('access-key').value='';$('connect-dialog').close()}
+$('connect').addEventListener('click',connect);
+$('cancel-connect').addEventListener('click',closeConnect);
+$('connect-dialog').addEventListener('cancel',()=>{$('access-key').value=''});
+$('connect-form').addEventListener('submit',async event=>{
+ event.preventDefault();if(!liveAdapter||typeof window.websiteEditorConnect!=='function'){closeConnect();return}let key=$('access-key').value.trim();$('access-key').value='';if(!key)return;
+ $('submit-connect').disabled=true;$('cancel-connect').disabled=true;$('connect-error').textContent='Connecting securely…';
+ try{const result=await window.websiteEditorConnect(key);key='';showConnection(result||{state:'connected'});if(authenticated){closeConnect();notice('Connected. You can now publish your changes.')}else $('connect-error').textContent='The connection could not be completed. Check the key’s website access and try again.'}
+ catch(error){key='';$('connect-error').textContent='We couldn’t connect. Check that your key has access to this repository with Contents read and write, then try again.'}
+ finally{key='';$('submit-connect').disabled=false;$('cancel-connect').disabled=false}
+});
+$('disconnect').addEventListener('click',async()=>{try{await window.websiteEditorDisconnect();showConnection({state:'disconnected'});notice('Disconnected. Your draft is still here.')}catch{notice('The connection could not be closed. Close this tab to forget the access key.',true)}});
+
+$('restore').addEventListener('click',async()=>{if(busy||!confirm('Replace this browser draft with the currently published content? Unsaved changes and draft images will be removed.'))return;busy=true;update();try{const result=await api('/api/reset',{});files=result.files;saved=snapshot();published='';hasDraft=false;loaded=false;busy=false;await load();notice(result.message||'Published content restored.')}catch(error){notice(friendlyError(error),true)}finally{busy=false;update()}});
+$('editor').addEventListener('submit',event=>event.preventDefault());$('save').addEventListener('click',()=>action('save'));$('publish').addEventListener('click',()=>action('publish'));$('retry').addEventListener('click',load);window.addEventListener('beforeunload',event=>{if(busy||(loaded&&snapshot()!==saved)){event.preventDefault();event.returnValue=''}});document.addEventListener('keydown',event=>{if((event.metaKey||event.ctrlKey)&&event.key.toLowerCase()==='s'){event.preventDefault();action('save')}});load();
+</script>
+</body>
+</html>

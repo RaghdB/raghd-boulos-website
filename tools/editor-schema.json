@@ -2,14 +2,14 @@
   "content": [
     {
       "name": "shared",
-      "label": "Name, contact & navigation",
+      "label": "Contact & navigation",
       "type": "file",
       "path": "docs/_data/shared.json",
       "format": "json",
       "fields": [
         {
           "name": "name",
-          "label": "Name",
+          "label": "Your name",
           "type": "string",
           "required": true
         },
@@ -21,55 +21,55 @@
         },
         {
           "name": "phone",
-          "label": "Phone",
+          "label": "Phone number",
           "type": "string",
           "required": true
         },
         {
           "name": "email",
-          "label": "Email",
+          "label": "Email address",
           "type": "string",
           "required": true
         },
         {
           "name": "about_label",
-          "label": "About Label",
+          "label": "About navigation label",
           "type": "string",
           "required": true
         },
         {
           "name": "visual_label",
-          "label": "Visual Label",
+          "label": "Visual design navigation label",
           "type": "string",
           "required": true
         },
         {
           "name": "interaction_label",
-          "label": "Interaction Label",
+          "label": "Interaction design navigation label",
           "type": "string",
           "required": true
         },
         {
           "name": "architecture_label",
-          "label": "Architecture Label",
+          "label": "Architecture navigation label",
           "type": "string",
           "required": true
         },
         {
           "name": "prototyping_label",
-          "label": "Prototyping Label",
+          "label": "Prototyping navigation label",
           "type": "string",
           "required": true
         },
         {
           "name": "desktop_notice",
-          "label": "Desktop Notice",
+          "label": "Desktop viewing message",
           "type": "string",
           "required": true
         },
         {
           "name": "desktop_short",
-          "label": "Desktop Short",
+          "label": "Short desktop viewing message",
           "type": "string",
           "required": true
         }
@@ -95,67 +95,67 @@
           "fields": [
             {
               "name": "block_01",
-              "label": "Architecture.",
+              "label": "Main heading",
               "type": "string"
             },
             {
               "name": "block_02",
-              "label": "Information architecture is how individual parts fits together to form a c",
+              "label": "Introduction",
               "type": "text"
             },
             {
               "name": "block_03",
-              "label": "Reshaping a classic internet brand",
+              "label": "Section 1 — heading",
               "type": "string"
             },
             {
               "name": "block_04",
-              "label": "Schibsted, Stockholm",
+              "label": "Section 1 — caption",
               "type": "string"
             },
             {
               "name": "block_05",
-              "label": "In 2018, I joined Schibsted to help their classic tv guide meet the future",
+              "label": "Section 1 — text 1",
               "type": "text"
             },
             {
               "name": "block_06",
-              "label": "The plan in place",
+              "label": "Section 1 — subheading 1",
               "type": "string"
             },
             {
               "name": "block_07",
-              "label": "When I joined, efforts had been made to launch a new section for browsing ",
+              "label": "Section 1 — text 2",
               "type": "text"
             },
             {
               "name": "block_08",
-              "label": "What we were about",
+              "label": "Section 1 — subheading 2",
               "type": "string"
             },
             {
               "name": "block_09",
-              "label": "I started exploring for an alternative strategy. To communicate this to th",
+              "label": "Section 1 — text 3",
               "type": "text"
             },
             {
               "name": "block_10",
-              "label": "The misconception",
+              "label": "Section 1 — subheading 3",
               "type": "string"
             },
             {
               "name": "block_11",
-              "label": "I also looked at what content really looked like on streaming services. I ",
+              "label": "Section 1 — text 4",
               "type": "text"
             },
             {
               "name": "block_12",
-              "label": "A better way",
+              "label": "Section 1 — subheading 4",
               "type": "string"
             },
             {
               "name": "block_13",
-              "label": "What if rather than killing off what’s working, we would instead refresh o",
+              "label": "Section 1 — text 5",
               "type": "text"
             }
           ]
@@ -176,142 +176,142 @@
           "fields": [
             {
               "name": "block_01",
-              "label": "Specialised in bringing product visions to life.",
+              "label": "Main heading",
               "type": "string"
             },
             {
               "name": "block_02",
-              "label": "I help bring product visions to life through visual design, interaction de",
+              "label": "Introduction",
               "type": "text"
             },
             {
               "name": "block_03",
-              "label": "Who I am",
+              "label": "About me — section heading",
               "type": "string"
             },
             {
               "name": "block_04",
-              "label": "What mostly makes me unique is my breadth. ‍ I can obsess the little thing",
+              "label": "About me — biography",
               "type": "text"
             },
             {
               "name": "block_05",
-              "label": "Resume",
+              "label": "Résumé — section heading",
               "type": "string"
             },
             {
               "name": "block_06",
-              "label": "2022 - Present",
+              "label": "Experience 1 — dates",
               "type": "string"
             },
             {
               "name": "block_07",
-              "label": "Lunar",
+              "label": "Experience 1 — company",
               "type": "string"
             },
             {
               "name": "block_08",
-              "label": "2021 - Present",
+              "label": "Experience 2 — dates",
               "type": "string"
             },
             {
               "name": "block_09",
-              "label": "Dropset",
+              "label": "Experience 2 — company",
               "type": "string"
             },
             {
               "name": "block_10",
-              "label": "2021 - 2022",
+              "label": "Experience 3 — dates",
               "type": "string"
             },
             {
               "name": "block_11",
-              "label": "Qapital",
+              "label": "Experience 3 — company",
               "type": "string"
             },
             {
               "name": "block_12",
-              "label": "2019 - 2021",
+              "label": "Experience 4 — dates",
               "type": "string"
             },
             {
               "name": "block_13",
-              "label": "44",
+              "label": "Experience 4 — company",
               "type": "string"
             },
             {
               "name": "block_14",
-              "label": "2018 - 2019",
+              "label": "Experience 5 — dates",
               "type": "string"
             },
             {
               "name": "block_15",
-              "label": "Schibsted",
+              "label": "Experience 5 — company",
               "type": "string"
             },
             {
               "name": "block_16",
-              "label": "2014 - 2018",
+              "label": "Experience 6 — dates",
               "type": "string"
             },
             {
               "name": "block_17",
-              "label": "Vantage",
+              "label": "Experience 6 — company",
               "type": "string"
             },
             {
               "name": "block_18",
-              "label": "2013 - 2014",
+              "label": "Experience 7 — dates",
               "type": "string"
             },
             {
               "name": "block_19",
-              "label": "MAG Interactive",
+              "label": "Experience 7 — company",
               "type": "string"
             },
             {
               "name": "block_20",
-              "label": "Skills",
+              "label": "Skills — section heading",
               "type": "string"
             },
             {
               "name": "block_21",
-              "label": "Information architecture",
+              "label": "Skill 1",
               "type": "string"
             },
             {
               "name": "block_22",
-              "label": "Low-fi prototyping",
+              "label": "Skill 2",
               "type": "string"
             },
             {
               "name": "block_23",
-              "label": "Hi-fi prototyping",
+              "label": "Skill 3",
               "type": "string"
             },
             {
               "name": "block_24",
-              "label": "Typography",
+              "label": "Skill 4",
               "type": "string"
             },
             {
               "name": "block_25",
-              "label": "Design systems",
+              "label": "Skill 5",
               "type": "string"
             },
             {
               "name": "block_26",
-              "label": "Copywriting",
+              "label": "Skill 6",
               "type": "string"
             },
             {
               "name": "block_27",
-              "label": "Branding",
+              "label": "Skill 7",
               "type": "string"
             },
             {
               "name": "block_28",
-              "label": "Xcode and UIKit",
+              "label": "Skill 8",
               "type": "string"
             }
           ]
@@ -338,42 +338,42 @@
           "fields": [
             {
               "name": "block_01",
-              "label": "Interaction design.",
+              "label": "Main heading",
               "type": "string"
             },
             {
               "name": "block_02",
-              "label": "Interaction design often acts as the glue, meshing software together with ",
+              "label": "Introduction",
               "type": "text"
             },
             {
               "name": "block_03",
-              "label": "Pull-to-continue",
+              "label": "Section 1 — heading",
               "type": "string"
             },
             {
               "name": "block_04",
-              "label": "Dropset · Streamlining a frequent workflow",
+              "label": "Section 1 — caption",
               "type": "string"
             },
             {
               "name": "block_05",
-              "label": "In the app Dropset, there was a need to be able to frequently navigate fro",
+              "label": "Section 1 — text 1",
               "type": "text"
             },
             {
               "name": "block_06",
-              "label": "But, navigating back and forth can quickly become tiring. What was needed ",
+              "label": "Section 1 — text 2",
               "type": "text"
             },
             {
               "name": "block_07",
-              "label": "Adding a button for it didn’t feel entirely connected to the action. A pul",
+              "label": "Section 1 — text 3",
               "type": "text"
             },
             {
               "name": "block_08",
-              "label": "The result is a natural way of moving through a sequence of exercises, usi",
+              "label": "Section 1 — text 4",
               "type": "string"
             }
           ]
@@ -461,77 +461,77 @@
           "fields": [
             {
               "name": "block_01",
-              "label": "Prototyping.",
+              "label": "Main heading",
               "type": "string"
             },
             {
               "name": "block_02",
-              "label": "Ever since I started designing simple websites back in the late 90s, I hav",
+              "label": "Introduction",
               "type": "text"
             },
             {
               "name": "block_03",
-              "label": "When to use high fidelity in prototyping?",
+              "label": "Section 1 — heading",
               "type": "string"
             },
             {
               "name": "block_04",
-              "label": "Testing for desirability, not usability",
+              "label": "Section 1 — caption",
               "type": "string"
             },
             {
               "name": "block_05",
-              "label": "Why would you want to build a real app to test, rather than just testing w",
+              "label": "Section 1 — text 1",
               "type": "text"
             },
             {
               "name": "block_06",
-              "label": "You want an experience that’s not completely standard",
+              "label": "Section 1 — subheading 1",
               "type": "string"
             },
             {
               "name": "block_07",
-              "label": "I have noticed that there’s three stages of quality control when building ",
+              "label": "Section 1 — text 2",
               "type": "text"
             },
             {
               "name": "block_08",
-              "label": "Your experience requires live data",
+              "label": "Section 1 — subheading 2",
               "type": "string"
             },
             {
               "name": "block_09",
-              "label": "Low fidelity is usually fine for pure usability testing. Concept testing i",
+              "label": "Section 1 — text 3",
               "type": "text"
             },
             {
               "name": "block_10",
-              "label": "‍",
+              "label": "Section 1 — text 4",
               "type": "string"
             },
             {
               "name": "block_11",
-              "label": "One example of that could be building a Chat GPT product. If you’re buildi",
+              "label": "Section 1 — text 5",
               "type": "text"
             },
             {
               "name": "block_12",
-              "label": "as much",
+              "label": "Section 1 — text 6",
               "type": "string"
             },
             {
               "name": "block_13",
-              "label": "is wether they can understand how to navigate around it.",
+              "label": "Section 1 — text 7",
               "type": "string"
             },
             {
               "name": "block_14",
-              "label": "You’re building an MVP of a new product",
+              "label": "Section 1 — subheading 3",
               "type": "string"
             },
             {
               "name": "block_15",
-              "label": "Building a completely new product is a high risk endeavour. Most who try i",
+              "label": "Section 1 — text 8",
               "type": "text"
             }
           ]
@@ -583,152 +583,152 @@
           "fields": [
             {
               "name": "block_01",
-              "label": "Visual design.",
+              "label": "Main heading",
               "type": "string"
             },
             {
               "name": "block_02",
-              "label": "Aesthetics are important, because they can have a strong influence on how ",
+              "label": "Introduction",
               "type": "text"
             },
             {
               "name": "block_03",
-              "label": "App design and branding",
+              "label": "Section 1 — heading",
               "type": "string"
             },
             {
               "name": "block_04",
-              "label": "Dropset · An app for tracking gym workouts · 2023",
+              "label": "Section 1 — caption",
               "type": "string"
             },
             {
               "name": "block_05",
-              "label": "Dropset is an app for tracking gym workouts, made for an audience with a m",
+              "label": "Section 1 — text 1",
               "type": "text"
             },
             {
               "name": "block_06",
-              "label": "Take it for a spin from the App Store",
+              "label": "Section 1 — text 2",
               "type": "string"
             },
             {
               "name": "block_07",
-              "label": "Designed in Figma and built with Xcode.",
+              "label": "Section 1 — text 3",
               "type": "string"
             },
             {
               "name": "block_08",
-              "label": "Marketing site designed with Figma and created with Webflow. Intended to r",
+              "label": "Section 1 — text 4",
               "type": "text"
             },
             {
               "name": "block_09",
-              "label": "https://getdropset.app",
+              "label": "Section 1 — text 5",
               "type": "string"
             },
             {
               "name": "block_10",
-              "label": "Promotional artwork for the App Store. Intended ro represent what the app ",
+              "label": "Section 1 — text 6",
               "type": "text"
             },
             {
               "name": "block_11",
-              "label": "The two stripes of the brand are inspired by sport jerseys, where the arms",
+              "label": "Section 1 — text 7",
               "type": "text"
             },
             {
               "name": "block_12",
-              "label": "Brand design",
+              "label": "Section 2 — heading",
               "type": "string"
             },
             {
               "name": "block_13",
-              "label": "The Scandinavian Bank made in 2024",
+              "label": "Section 2 — caption",
               "type": "string"
             },
             {
               "name": "block_14",
-              "label": "A branding concept for a neobank from Scandinavia. This came out of a desi",
+              "label": "Section 2 — text 1",
               "type": "text"
             },
             {
               "name": "block_15",
-              "label": "The tag line.",
+              "label": "Section 2 — text 2",
               "type": "string"
             },
             {
               "name": "block_16",
-              "label": "Intended associations.",
+              "label": "Section 2 — text 3",
               "type": "string"
             },
             {
               "name": "block_17",
-              "label": "The colour palette, ranging from sun, forest, stone and snow.",
+              "label": "Section 2 — text 4",
               "type": "string"
             },
             {
               "name": "block_18",
-              "label": "Bank apps are usually quite heavy on lists, transaction lists in particula",
+              "label": "Section 2 — text 5",
               "type": "text"
             },
             {
               "name": "block_19",
-              "label": "Photography played a big part in the communication, depicting all the stuf",
+              "label": "Section 2 — text 6",
               "type": "text"
             },
             {
               "name": "block_20",
-              "label": "The period case from the type face turned out to have this lovely squircle",
+              "label": "Section 2 — text 7",
               "type": "text"
             },
             {
               "name": "block_21",
-              "label": "Typesettings",
+              "label": "Section 2 — text 8",
               "type": "string"
             },
             {
               "name": "block_22",
-              "label": "Fintive",
+              "label": "Section 3 — heading",
               "type": "string"
             },
             {
               "name": "block_23",
-              "label": "Fintinve · Visual identity, product design and brand work",
+              "label": "Section 3 — caption",
               "type": "string"
             },
             {
               "name": "block_24",
-              "label": "A web app for a U.S based fintech company, working on underwriting loans. ",
+              "label": "Section 3 — text 1",
               "type": "text"
             },
             {
               "name": "block_25",
-              "label": "Huge financial reports called Credit Reviews, for evaluating lenders were ",
+              "label": "Section 3 — text 2",
               "type": "text"
             },
             {
               "name": "block_26",
-              "label": "Interactions like detail inspectors, hover actions and editable cells.",
+              "label": "Section 3 — text 3",
               "type": "string"
             },
             {
               "name": "block_27",
-              "label": "Logotype",
+              "label": "Section 3 — text 4",
               "type": "string"
             },
             {
               "name": "block_28",
-              "label": "Print design",
+              "label": "Section 4 — heading",
               "type": "string"
             },
             {
               "name": "block_29",
-              "label": "Lunar · Printed magazine",
+              "label": "Section 4 — caption",
               "type": "string"
             },
             {
               "name": "block_30",
-              "label": "Led an initiative on how to communicate research of our customers through ",
+              "label": "Section 4 — text 1",
               "type": "text"
             }
           ]
