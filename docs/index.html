@@ -99,7 +99,7 @@ dl>div{align-items:start}
 /* Two sidebar groups: professional, then personal. */
 .menu-label{font-size:16px;line-height:1;font-weight:300;color:var(--muted);margin-top:26px}
 .is-favorites .page{gap:64px}.favorites-page .section-heading{margin-bottom:32px}.favorites-section{scroll-margin-top:80px}
-.hobby-list{display:flex;flex-direction:column}.hobby-list>div{padding:28px 0;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:4px}.hobby-list>div:last-child{border-bottom:1px solid var(--line)}
+.hobby-list{display:flex;flex-direction:column}.hobby-list>div{padding:40px 0;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:12px}.hobby-list .small{max-width:600px}.hobby-list>div:last-child{border-bottom:1px solid var(--line)}
 .hobby-more{display:flex;flex-direction:column;gap:8px}.regular-links{display:flex;gap:32px;flex-wrap:wrap;font-size:25px;line-height:1.6;letter-spacing:-.3px}.regular-links a{text-underline-offset:6px}
 @media(max-height:780px) and (min-width:701px){.menu{gap:12px}.menu a{font-size:30px;height:30px}.menu-label{margin-top:16px}}
 @media(max-width:700px){.menu{align-items:baseline}.menu-label{flex-basis:100%;margin-top:6px;font-size:13px}.regular-links{font-size:22px;gap:24px}.hobby-list>div{padding:22px 0}}
@@ -163,12 +163,11 @@ dl>div{align-items:start}
 </section>
 <footer class="page-end"><span>Raghd Boulos · Personal website</span><span class="mobile-contact"><a href="mailto:Raghd.Boulos@gmail.com">Raghd.Boulos@gmail.com</a><a href="tel:+972507444557">+97250 744 4557</a></span><a href="https://github.com/RaghdB" target="_blank" rel="noopener noreferrer">GitHub ↗</a></footer></div><div id="hobbies-page" class="page" hidden><header class="page-hero"><h1>Off the clock.</h1><p class="hero-intro">Outside of studies and work, I draw, run, and tinker with software, usually to automate something. Lately I’ve been getting into frisbee.</p></header>
 <section class="hobby-list" aria-label="Hobbies">
-<div><h2>Drawing</h2></div>
-<div><h2>Running</h2></div>
-<div><h2>Building and automating</h2><p class="caption">Software projects and tinkering</p></div>
-<div><h2>Frisbee</h2><p class="caption">Recently started</p></div>
+<div><h2>Drawing</h2><p class="small">Something I enjoy doing for its own sake.</p></div>
+<div><h2>Running</h2><p class="small">My way of getting moving.</p></div>
+<div><h2>Building and automating</h2><p class="small">I like developing and tinkering with software, and automating whatever I find myself doing twice. At Israel Railways that turned into automating the push-message process in Python. On my own time it’s mostly AI tooling: Claude, Codex, MCP, and local LLMs.</p></div>
+<div><h2>Frisbee</h2><p class="small">The newest one. I’ve only recently started.</p></div>
 </section>
-<section class="hobby-more"><p class="small"><span class="secondary">More of what I like</span></p><p class="regular-links"><a href="#games">Games</a><a href="#watching">Watching</a><a href="#music">Music</a></p></section>
 <footer class="page-end"><span>Raghd Boulos · Personal</span><span class="mobile-contact"><a href="mailto:Raghd.Boulos@gmail.com">Raghd.Boulos@gmail.com</a></span><a href="#about">Back to about ↗</a></footer></div><div id="games-page" class="page favorites-page" hidden><header class="page-hero favorites-hero"><h1>Games.</h1><p class="hero-intro">The games I keep coming back to.</p>
 </header>
 <section class="favorites-section" id="games-games" aria-labelledby="heading-games-games"><h2 id="heading-games-games" class="visually-hidden">Games</h2><div class="covers-grid mosaic" id="grid-games-games">
