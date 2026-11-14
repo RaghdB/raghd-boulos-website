@@ -203,6 +203,40 @@ html.dark #about-resume .org-label img{filter:invert(1)}
 
 #about-resume{margin-top:0}#about-practice{margin-top:-56px}.org-label .mark-moh{height:22px}
 @media(max-width:900px){#about-resume{margin-top:0}}@media(max-width:700px){#about-resume{margin-top:0}#about-practice{margin-top:0}}
+
+/* Own look: section labels, timeline, compact sidebar. */
+h2.sec,#about-practice h2.sec{display:flex;align-items:center;gap:14px;font-size:13px;line-height:1;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:40px}
+h2.sec span{font-weight:600;color:var(--ink);letter-spacing:.08em}
+h2.sec::after{content:'';flex:1;height:1px;background:var(--line)}
+#about-practice h2.sec{margin-bottom:28px;color:#282929b0}#about-practice h2.sec::after{background:#28292933}
+#about-resume{display:block}
+#about-skills,#about-practice{margin-top:-56px}
+.timeline{list-style:none;margin:0;padding:0}
+.timeline li{display:grid;grid-template-columns:150px 1fr;font-size:20px;line-height:1.6;letter-spacing:-.2px;font-weight:300}
+.timeline .when{font-size:16px;line-height:2;letter-spacing:0;color:var(--muted)}
+.timeline li>div{position:relative;border-left:1px solid var(--line);padding:0 0 32px 32px}
+.timeline li:last-child>div{padding-bottom:0}
+.timeline li>div::before{content:'';position:absolute;left:-4.5px;top:12px;width:8px;height:8px;border-radius:50%;background:var(--paper);border:1px solid var(--muted);box-sizing:border-box}
+.timeline li.now>div::before{background:#67e0d2;border-color:#67e0d2}
+.timeline p{font-size:16px;line-height:1.5;letter-spacing:0;color:var(--muted);margin:2px 0 0}.timeline p+p{margin-top:8px}
+html.dark .timeline .org-label img{filter:invert(1)}
+dl.skills{display:grid;gap:12px}dl.skills>div{display:grid;grid-template-columns:150px 1fr;gap:0;align-items:baseline}
+dl.skills dt{font-size:16px;line-height:2;letter-spacing:0;font-weight:300;color:var(--muted)}dl.skills dd{font-size:20px;line-height:1.6;letter-spacing:-.2px;font-weight:300;margin:0;padding-left:33px}
+@media(min-width:701px){
+.sidebar{justify-content:flex-start;gap:64px}
+.menu{gap:10px;align-items:flex-start}
+.menu a{position:relative;font-size:22px;line-height:1.3;height:auto}
+.menu a[aria-current]::before{content:'';position:absolute;left:-16px;top:.22em;bottom:.22em;width:3px;border-radius:2px;background:#67e0d2}
+.menu-label{font-size:14px;line-height:1;margin-top:20px;margin-bottom:2px}
+.sidebar .identity{order:0}.sidebar .contact{order:1;margin-top:-52px;display:flex;flex-direction:column;gap:3px;font-size:14px;line-height:1.4;letter-spacing:0;font-weight:300}.sidebar .contact a{color:var(--muted);transition:color .18s ease}.sidebar .contact a:hover{color:var(--ink);text-decoration:none}.sidebar .menu{order:2}
+main,.is-favorites main,.is-music main{padding-top:124px}
+}
+@media(max-width:700px){
+#about-skills,#about-practice{margin-top:0}
+.timeline li{grid-template-columns:1fr;font-size:18px}.timeline li>div{border:0;padding:0 0 28px}.timeline li>div::before{display:none}
+dl.skills>div{grid-template-columns:1fr}dl.skills dd{padding-left:0;font-size:18px}
+h2.sec{margin-bottom:28px}
+}
 </style></head><body>
 <aside class="sidebar"><div class="identity"><strong>Raghd Boulos</strong><span>Haifa</span></div><button type="button" class="theme-toggle" aria-label="Switch colour theme"></button><nav class="menu" aria-label="Main navigation"><a href="#about">About</a><a href="#about-projects">Projects</a><a href="#about-practice">Who I am</a><span class="menu-label">Things I enjoy</span><a href="#hobbies">Hobbies</a><a href="#music">Music</a><a href="#games">Games</a><a href="#watching">Watching</a></nav><div class="contact"><a href="tel:+972507444557">+97250 744 4557</a><a href="mailto:Raghd.Boulos@gmail.com">Raghd.Boulos@gmail.com</a></div></aside>
 <a class="skip-link" href="#main-content">Skip to content</a><main id="main-content" tabindex="-1"><div id="about-page" class="page"><section id="about-intro">
@@ -211,7 +245,7 @@ html.dark #about-resume .org-label img{filter:invert(1)}
   <p class="intro-copy">I’m a Computer Engineering student @Technion – Israel Institute of Technology. I enjoy building systems.<br>You can find me on <a href="https://github.com/RaghdB" target="_blank" rel="noopener noreferrer">GitHub</a>.<br>I’m also on <a href="https://www.linkedin.com/in/raghd-boulos-171759411/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.<br>Or just send me some <a href="mailto:Raghd.Boulos@gmail.com">mail</a>.<br>Here’s my <a href="assets/Raghd_Boulos_CV.pdf" download>CV</a>.</p>
 </section>
 
-<section id="about-projects"><h2>Projects</h2>
+<section id="about-projects"><h2 class="sec"><span>01</span>Projects</h2>
 <div class="work-list">
 <article class="work"><div class="work-head"><div class="work-title"><h3>Flying Cat on FPGA</h3><p class="caption">Digital design · SystemVerilog RTL · DE10-Lite</p></div><p class="small">A Flappy Bird-inspired game built as a digital circuit in SystemVerilog RTL for the DE10-Lite. It draws an animated cat over parallax scenery with a day/night cycle on VGA, detects collisions pixel by pixel, and speeds up its randomized pipes as the score climbs. While playing, the world floods and the controls switch to swimming and diving. Physics-based movement, scoring, and synchronized audio are all built in hardware.</p></div><div class="work-art game-thumb"><img src="media/flying-cat.png" width="640" height="480" alt="Flying Cat game start screen, showing the pixel-art cat, rainbow trail, obstacles, and score." loading="lazy"></div></article>
 <div class="content-divider"></div>
@@ -225,31 +259,26 @@ html.dark #about-resume .org-label img{filter:invert(1)}
 </div></section>
 
 <section id="about-resume">
-  <div class="resume-col">
-    <h2>Resume</h2>
-    <ul class="resume-list">
-      <li><span class="when">2023 – Present</span><span class="org-label"><img class="mark-technion" src="media/technion-mark.webp" alt="" width="14" height="22">Technion</span><span class="what">B.Sc. in Computer Engineering, sixth semester, GPA 89</span></li>
-      <li><span class="when">2023 – Present</span><span class="org-label"><img class="mark-railways" src="media/railways-ink.webp" alt="" width="28" height="15">Israel Railways</span><span class="what">Push Notifications Publisher, Operational Control Center</span><span class="what more">Publish real-time push notifications to passengers during live operations, and verify schedule accuracy across all railway information systems.</span><span class="what more">Beyond the role: automated the push-message creation process in Python, developed JavaScript tools that adapted legacy systems to modern standards, and wrote high-level design documents for system enhancements.</span></li>
-      <li><span class="when">2022 – 2023</span><span class="org-label"><img class="mark-moh" src="media/moh-ink.webp" alt="" width="23" height="22">Ministry of Health</span><span class="what">COVID-19 call center for foreign nationals</span></li>
-    </ul>
-  </div>
-  <div class="resume-col">
-    <h2>Skills</h2>
-    <ul class="skill-list">
-      <li>C and C++</li>
-      <li>Python</li>
-      <li>JavaScript</li>
-      <li>SystemVerilog</li>
-      <li>MATLAB</li>
-      <li>RTL design and FPGA</li>
-      <li>Git, Bash, and Linux</li>
-      <li>Arabic, Hebrew, and English</li>
-    </ul>
-  </div>
+  <h2 class="sec"><span>02</span>Resume</h2>
+  <ol class="timeline">
+    <li class="now"><span class="when">2023 – Present</span><div><span class="org-label"><img class="mark-technion" src="media/technion-mark.webp" alt="" width="14" height="22">Technion</span><p>B.Sc. in Computer Engineering, sixth semester, GPA 89</p></div></li>
+    <li class="now"><span class="when">2023 – Present</span><div><span class="org-label"><img class="mark-railways" src="media/railways-ink.webp" alt="" width="28" height="15">Israel Railways</span><p>Push Notifications Publisher, Operational Control Center</p><p>Publish real-time push notifications to passengers during live operations, and verify schedule accuracy across all railway information systems.</p><p>Beyond the role: automated the push-message creation process in Python, developed JavaScript tools that adapted legacy systems to modern standards, and wrote high-level design documents for system enhancements.</p></div></li>
+    <li><span class="when">2022 – 2023</span><div><span class="org-label"><img class="mark-moh" src="media/moh-ink.webp" alt="" width="23" height="22">Ministry of Health</span><p>COVID-19 call center for foreign nationals</p></div></li>
+  </ol>
+</section>
+
+<section id="about-skills">
+  <h2 class="sec"><span>03</span>Skills</h2>
+  <dl class="skills">
+    <div><dt>Programming</dt><dd>C, C++, Python, JavaScript, SystemVerilog, MATLAB</dd></div>
+    <div><dt>Hardware</dt><dd>RTL design, FPGA, digital logic</dd></div>
+    <div><dt>Tools</dt><dd>Git, Bash, Linux</dd></div>
+    <div><dt>Languages</dt><dd>Arabic, Hebrew, English</dd></div>
+  </dl>
 </section>
 
 <section id="about-practice">
-  <h2>Who I am</h2>
+  <h2 class="sec"><span>04</span>Who I am</h2>
   <p>I am a very curious individual who likes knowing how things work, all the way down.</p>
   <p>That is what drew me to computer engineering. Curiosity makes me want to understand how systems work, and how they integrate together.</p>
   <p>Outside of studies and work, I enjoy drawing and running. I’ve also recently started playing frisbee!</p>
