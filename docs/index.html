@@ -241,6 +241,10 @@ h2.sec{margin-bottom:28px}
 
 /* Section labels: sentence case, no rule. */
 h2.sec{text-transform:none;letter-spacing:0;font-size:16px;font-weight:300;gap:10px}h2.sec span{letter-spacing:0}h2.sec::after{display:none}
+
+/* Section headings: large and light. */
+h2.sec{display:block;font-size:36px;line-height:1.16;font-weight:300;letter-spacing:-.6px;color:var(--ink);margin-bottom:36px}
+@media(max-width:700px){h2.sec{font-size:28px;margin-bottom:24px}}
 </style></head><body>
 <aside class="sidebar"><div class="identity"><strong>Raghd Boulos</strong><span>Haifa</span></div><button type="button" class="theme-toggle" aria-label="Switch colour theme"></button><nav class="menu" aria-label="Main navigation"><a href="#about">About</a><a href="#about-projects">Projects</a><a href="#about-practice">Who I am</a><span class="menu-label">Things I enjoy</span><a href="#hobbies">Hobbies</a><a href="#music">Music</a><a href="#games">Games</a><a href="#watching">Watching</a></nav><div class="contact"><a href="tel:+972507444557">+97250 744 4557</a><a href="mailto:Raghd.Boulos@gmail.com">Raghd.Boulos@gmail.com</a></div></aside>
 <a class="skip-link" href="#main-content">Skip to content</a><main id="main-content" tabindex="-1"><div id="about-page" class="page"><section id="about-intro">
@@ -249,7 +253,7 @@ h2.sec{text-transform:none;letter-spacing:0;font-size:16px;font-weight:300;gap:1
   <p class="intro-copy">I’m a Computer Engineering student @Technion – Israel Institute of Technology. I enjoy building systems.<br>You can find me on <a href="https://github.com/RaghdB" target="_blank" rel="noopener noreferrer">GitHub</a>.<br>I’m also on <a href="https://www.linkedin.com/in/raghd-boulos-171759411/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.<br>Or just send me some <a href="mailto:Raghd.Boulos@gmail.com">mail</a>.<br>Here’s my <a href="assets/Raghd_Boulos_CV.pdf" download>CV</a>.</p>
 </section>
 
-<section id="about-projects"><h2 class="sec"><span>01</span>Projects</h2>
+<section id="about-projects"><h2 class="sec">Projects</h2>
 <div class="work-list">
 <article class="work"><div class="work-head"><div class="work-title"><h3>Flying Cat on FPGA</h3><p class="caption">Digital design · SystemVerilog RTL · DE10-Lite</p></div><p class="small">A Flappy Bird-inspired game built as a digital circuit in SystemVerilog RTL for the DE10-Lite. It draws an animated cat over parallax scenery with a day/night cycle on VGA, detects collisions pixel by pixel, and speeds up its randomized pipes as the score climbs. While playing, the world floods and the controls switch to swimming and diving. Physics-based movement, scoring, and synchronized audio are all built in hardware.</p></div><div class="work-art game-thumb"><img src="media/flying-cat.png" width="640" height="480" alt="Flying Cat game start screen, showing the pixel-art cat, rainbow trail, obstacles, and score." loading="lazy"></div></article>
 <div class="content-divider"></div>
@@ -263,7 +267,7 @@ h2.sec{text-transform:none;letter-spacing:0;font-size:16px;font-weight:300;gap:1
 </div></section>
 
 <section id="about-resume">
-  <h2 class="sec"><span>02</span>Resume</h2>
+  <h2 class="sec">Resume</h2>
   <ol class="timeline">
     <li class="now"><span class="when">2023 – Present</span><div><span class="org-label"><img class="mark-technion" src="media/technion-mark.webp" alt="" width="14" height="22">Technion</span><p>B.Sc. in Computer Engineering, sixth semester, GPA 89</p></div></li>
     <li class="now"><span class="when">2023 – Present</span><div><span class="org-label"><img class="mark-railways" src="media/railways-ink.webp" alt="" width="28" height="15">Israel Railways</span><p>Push Notifications Publisher, Operational Control Center</p><p>Publish real-time push notifications to passengers during live operations, and verify schedule accuracy across all railway information systems.</p><p>Beyond the role: automated the push-message creation process in Python, developed JavaScript tools that adapted legacy systems to modern standards, and wrote high-level design documents for system enhancements.</p></div></li>
@@ -272,7 +276,7 @@ h2.sec{text-transform:none;letter-spacing:0;font-size:16px;font-weight:300;gap:1
 </section>
 
 <section id="about-skills">
-  <h2 class="sec"><span>03</span>Skills</h2>
+  <h2 class="sec">Skills</h2>
   <dl class="skills">
     <div><dt>Programming</dt><dd>C, C++, Python, JavaScript, SystemVerilog, MATLAB</dd></div>
     <div><dt>Hardware</dt><dd>RTL design, FPGA, digital logic</dd></div>
